@@ -11,7 +11,6 @@
     <header>
       <nav id="menu">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/routes">Routes</a></li>
           <li><a href="/destinations">Destinations</a></li>
           <li><a href="/about">About</a></li>
@@ -26,12 +25,22 @@
           </p>
       </section>
       <section id="routes">
+        <fieldset>
+          <label for="starting">Starting Address:</label>
+          <input type="text" name="starting"/>
+          <label for="ending">Destination:</label>
+          <input type="text" name="ending"/>
+          <input type="submit" name="submit" value="Find Route"/>
+        </fieldset>
+        <h3>Route Alerts (Will be Template)</h3>
+          <p>Alert Text (Will be Template)</p>
+        <h3>Directions:(Will be Template)</h3>
+          <p>
+            (Will be Template)
+            written directions.
+          </p>
           <section id="map">
           </section>
-          <p>Map!</p>
-          <p>
-            routes testing!
-          </p>
       </section>
       <section id="destinations">
         <p>
