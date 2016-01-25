@@ -5,6 +5,7 @@
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit!</title>
     <!-- stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
   </head>
   <body>
     <header>
@@ -25,6 +26,9 @@
           </p>
       </section>
       <section id="routes">
+          <section id="map">
+          </section>
+          <p>Map!</p>
           <p>
             routes testing!
           </p>
@@ -47,8 +51,13 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/page.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
+    </script>
+    <script src="scripts/map.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+  </main>
   </body>
 </html>
