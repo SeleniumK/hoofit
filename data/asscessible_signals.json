@@ -1,0 +1,227 @@
+[
+  {
+    "title": "Linden Ave N & N130th St",
+    "position": {"lat": "47.7232409", "lng": "-122.3457509"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Aurora Ave N & Northgate way",
+    "position": {"lat":"47.7050032", "lng":"-122.3467947"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Aurora Ave N & N 135th St",
+    "position": {"lat": "47.7268929", "lng": "-122.3471908"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Greenwood Ave N & 132nd",
+    "position": {"lat": "47.7250443", "lng": "-122.3577483"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Stone & N 85th St",
+    "position": {"lat": "47.6905391", "lng": "-122.3440167"},
+    "type": ["audible"]
+  },
+  {
+    "title": "50th & Fremont Ave",
+    "position": {"lat": "47.6650092", "lng": "-122.352209"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "15th Ave NE & NE 143rd St",
+    "position": {"lat": "47.7321274", "lng": "-122.314914"},
+    "type": ["audible"]
+  },
+  {
+    "title": "15th Ave NE & NE 65th St ",
+    "position": {"lat": "47.6757855", "lng": "-122.3141303"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "15th Ave NE & NE 45th St",
+    "position": {"lat": "47.6612684", "lng": "-122.3141326"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "20th Ave NE & NE 65th St ",
+    "position": {"lat": "47.6757859", "lng": "-122.3087132"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "35th Ave NE & NE 70th St",
+    "position": {"lat": "47.6794195", "lng": "-122.2925598"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "31st Ave NE & NE 75 St",
+    "position": {"lat": "47.6830507", "lng": "-122.296968"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "35th Ave NE & NE 75th St",
+    "position": {"lat": "47.68305", "lng": "-122.2926592"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Roosevelt Wy NE & NE 45th St",
+    "position": {"lat": "47.6613007", "lng": "-122.3197651"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "15th Ave NE & NE 45th St",
+    "position": {"lat": "47.6612684", "lng": "-122.3141326"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "5th Ave NE & NE 112th St",
+    "position": {"lat": "47.7095715", "lng": "-122.3254442"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "15th Ave NE & NE 120th St",
+    "position": {"lat": "47.7157964", "lng": "-122.314751"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Sandpoint Way NE & NE 45th St",
+    "position": {"lat": "47.6613754", "lng": "-122.289414"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Ravenna Ave NE & NE 65th St",
+    "position": {"lat": "47.6757769", "lng": "-122.3060081"},
+    "type": ["audible"]
+  },
+  {
+    "title": "31st Ave NE & NE 75 St",
+    "position": {"lat": "47.6830507", "lng": "-122.296968"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Brooklyn Av NE & NE 45th St",
+    "position": {"lat": "47.6612856", "lng": "-122.3164942"},
+    "type": ["audible"]
+  },
+  {
+    "title": "University Way NE & NE 45th St",
+    "position": {"lat": "47.661282", "lng": "-122.3153394"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Pacific Way NE & Pacific Pl NE",
+    "position": {"lat": "47.6506124", "lng": "-122.3099142"},
+    "type": ["audible"]
+  },
+  {
+    "title": "55th Av NE & NE Princeston St",
+    "position": {"lat": "47.6692198", "lng": "-122.2780476"},
+    "type": ["audible"]
+  },
+  {
+    "title": "8th Av NE & Northgate Way NE",
+    "position": {"lat": "47.7085803", "lng": "-122.3227483"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "20th Av NE & Northgate Way NE",
+    "position": {"lat": "47.7084718", "lng": "-122.3084317"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "NE 100 & NE 1st Ave",
+    "position": {"lat": "47.7013808", "lng": "-122.3307024"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "6th Ave NW & Holman Rd NW",
+    "position": {"lat": "47.7009776", "lng": "-122.365728"},
+    "type": ["audible"]
+  },
+  {
+    "title": "15th Ave NW & N W 85th St ",
+    "position": {"lat": "47.6906124", "lng": "-122.3790037"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "15th Ave W & W Armour St",
+    "position": {"lat": "47.6447801", "lng": "-122.3784368"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Mary Ave NW & NW Holman Rd",
+    "position": {"lat": "47.6945292", "lng": "-122.3778515"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "18th Ave E & E Union St",
+    "position": {"lat": "47.6129011", "lng": "-122.3110528"},
+    "type": ["audible"]
+  },
+  {
+    "title": "17TH Ave E & E Madison St ",
+    "position": {"lat": "47.6155945", "lng": "-122.3123368"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "23rd Ave E & E Union St ",
+    "position": {"lat": "47.6129416", "lng": "-122.3049047"},
+    "type": ["audible"]
+  },
+  {
+    "title": "10th & Roanoke",
+    "position": {"lat": "47.6431916", "lng": "-122.322263"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "19th & Madison",
+    "position": {"lat": "47.6167309", "lng": "-122.309605"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Madison Av E & Summit St",
+    "position": {"lat": "47.6102711", "lng": "-122.3250992"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Broadway Av & SCCC",
+    "position": {"lat": "47.6162774", "lng": "-122.3237058"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Boren Av & E Olive St",
+    "position": {"lat": "47.6154556", "lng": "-122.3329369"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Madison & Summit",
+    "position": {"lat": "47.6102711", "lng": "-122.3250992"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Olive Way E & E Summit",
+    "position": {"lat": "47.6190269", "lng": "-122.327361"},
+    "type": ["audible", "vibrate"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Beacon Av S & S McClellan St",
+    "position": {"lat": "47.5786154", "lng": "-122.3137887"},
+    "type": ["audible"]
+  },
+  {
+    "title": "California Ave SW & Fauntleroy Way SW",
+    "position": {"lat": "47.5448713", "lng": "-122.3894207"},
+    "type": ["audible"]
+  },
+]
