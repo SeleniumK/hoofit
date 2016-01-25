@@ -7,6 +7,7 @@
     <!-- stylesheets -->
      <link rel="stylesheet" href="Styles/base.css">
      <link rel="stylesheet" href="Styles/nav.css">
+     <link rel="stylesheet" href="Styles/modules.css">
   </head>
   <style> .hoofitList{list-style-type: none;}</style>
   <body>
@@ -24,9 +25,16 @@
     </header>
     <main>
       <section id="home">
-          <p>
-
-          </p>
+        <div id="overlay">
+          <section class="overlaySection">
+            <h2>Get directions to your destination</h2>
+            <a href="/routes" title="Find Route"><button>Find a Route</button></a>
+          </section>
+          <section class="overlaySection">
+            <h2>Find the most walkable places near you</h2>
+            <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+          </section>
+        </div>
       </section>
       <section id="routes">
         <fieldset>
