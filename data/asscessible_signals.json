@@ -224,4 +224,41 @@
     "position": {"lat": "47.5448713", "lng": "-122.3894207"},
     "type": ["audible"]
   },
+  {
+    "title": "26th Ave SW SW Barton St",
+    "position": {"lat": "47.5210481", "lng": "-122.3735433"},
+    "type": ["audible"]
+  },
+  {
+    "title": "27th Av & SW Roxbury",
+    "position": {"lat": "47.5173967", "lng": "-122.3694966"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "35th Av & SW Roxbury",
+    "position": {"lat": "47.5174885", "lng": "-122.3790827"},
+    "type": ["audible"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "Beacon Av S & S McClellan St",
+    "position": {"lat": "47.5786154", "lng": "-122.3137887"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Rainier & Alaska St",
+    "position": {"lat": "47.5607264", "lng": "-122.2891838"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "Rainier Av S & S Andover St",
+    "position": {"lat": "47.5679461", "lng": "-122.2914104"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "5th Ave S & S Jackson St ",
+    "position": {"lat": "47.5991509", "lng": "-122.3298389"},
+    "type": ["audible", "tactile"]
+  },
 ]
