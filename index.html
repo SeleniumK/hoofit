@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width" initial-scale="1">
+    <title>Hoofit!</title>
+    <!-- stylesheets -->
+     <link rel="stylesheet" href="Styles/base.css">
+     <link rel="stylesheet" href="Styles/nav.css">
+  </head>
+  <body>
+    <header>
+      <h1>HoofIt</h1>
+      <h3>Explore Seattle on foot. Safely</h3>
+      <nav id="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/routes">Routes</a></li>
+          <li><a href="/destinations">Destinations</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+          <p>
+
+          </p>
+      </section>
+      <section id="routes">
+          <section id="map">
+          </section>
+          <p>Map!</p>
+          <p>
+            routes testing!
+          </p>
+      </section>
+      <section id="destinations">
+        <p>
+          destinations testing!
+        </p>
+      </section>
+      <section id="about">
+        <p>
+          Mission Statement:
+        </p>
+          <p>Team Members:</p>
+          <p><a href="images/">Sawako Ishida</a></p>
+          <p><a href="images/">Selena Flannery</a></p>
+          <p><a href="images/">Amy Leek</a></p>
+          <p><a href="images/SilverStar.jpg">Willie Richardson</a></p>
+      </section>
+      <section id="contact">
+        <p>
+          contact testing!
+        </p>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/page.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
+    </script>
+    <script src="scripts/map.js"></script>
+    <script src="/scripts/pageView.js"></script>
+    <script src="/scripts/pageController.js"></script>
+    <script src="/scripts/routes.js"></script>
+  </main>
+  </body>
+</html>
