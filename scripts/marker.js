@@ -1,15 +1,28 @@
 (function(module){
-  var marker = {};
+  var Marker = {};
 
-  marker.setMarker = function(){
-    var mark = new google.maps.Marker({
-      position: {lat: 47.5798175, lng: -122.3268311},
-      map: gMap,
-      title: '5th Ave S & S Jackson St'
+  Marker.all = [];
+
+  Marker.loadMarkers = function(marks){
+    Marker.all = marks.map(function(mark){
+      return new google.maps.Marker(mark);
     });
-
-    mark.setMap(map.gMap);
   };
 
-  module.marker = marker;
+  Marker.fetchMarkers = function(){
+    $.ajax('/data/accessible_signals.json', {
+      method: 'GET',
+      success: function(data, msg, xhr){
+        Marker.loadMarkers(data);
+      }
+    });
+  };
+
+  Marker.setMarkers = function(){
+    Marker.all.forEach(function(marker){
+      marker.setMap(map.gMap);
+    });
+  };
+
+  module.Marker = Marker;
 })(window);

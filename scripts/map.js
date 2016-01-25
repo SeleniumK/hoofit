@@ -1,7 +1,7 @@
 (function(module){
   var map = {};
 
-  map.gMap= {};
+  map.gMap = {};
 
   map.initMap = function(){
     map.gMap = new google.maps.Map(document.getElementById('map'), {
