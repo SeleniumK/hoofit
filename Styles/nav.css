@@ -1,33 +1,37 @@
-#menu {
-  width: 550px;
-    height: 35px;
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-    font-weight: bold;
+header {
     text-align: center;
-    text-shadow: 3px 2px 3px #333333;
-    background-color: #8AD9FF;
-        border-radius: 8px;
+   }
+
+h1 {
+   font-weight: bold;
+   font-size: 4em;
+}
+
+h3 {
+   font-weight: bold;
+   font-size: 2.5em;
+}
+
+#menu {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #menu ul {
-    height: auto;
-    padding: 8px 0px;
-    margin: 0px;
+    height: 80%;
+    padding: 0, 3%;
 }
 
 #menu li {
-display: inline;
-padding: 20px;
+    display: inline;
+    padding: 0 3%;
 }
 
 #menu a {
     text-decoration: none;
-    color: #00F;
-    padding: 8px 8px 8px 8px;
+    color: black;
 }
 
 #menu a:hover {
-    color: #F90;
-    background-color: #FFF;
 }
