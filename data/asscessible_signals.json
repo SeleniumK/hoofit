@@ -258,7 +258,287 @@
   },
   {
     "title": "5th Ave S & S Jackson St ",
-    "position": {"lat": "47.5991509", "lng": "-122.3298389"},
+    "position": {"lat": "47.599194", "lng": "-122.327591"},
+    "type": ["audible", "tactile"]
+  },//problematic above here
+  {
+    "title": "5th Ave S & S Lander St",
+    "position": {"lat": "47.5798103", "lng": "-122.3267516"},
+    "type": ["audible"]
+  },
+  {
+    "title": "5th Ave S & S Royal Brougham",
+    "position": {"lat": "47.592399", "lng": "-122.327452"},
+    "type": ["audible"]
+  },
+  {
+    "title": "Rainier Av S & S McClellan St",
+    "position": {"lat": "47.578351", "lng": "-122.2981148"},
+    "type": ["audible", "vibrate", "tactile"]
+  },
+  {
+    "title": "Rainier Av & S 23rd / Hill St",
+    "position": {"lat": "47.5845125", "lng": "-122.3029634"},
+    "type": ["audible", "vibrate", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Walker St",
+    "position": {"lat": "47.5836388", "lng": "-122.2981404"},
+    "type": ["audible", "vibrate", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Union St",
+    "position": {"lat": "47.6129532", "lng": "-122.2961855"},
+    "type": ["audible", "vibrate", "tactile"]
+  },
+  {
+    "title": "23rd Av & E Union St",
+    "position": {"lat": "47.6129416", "lng": "-122.3027107"},
+    "type": ["audible"]
+  },
+  {
+    "title": "35th Av S & Alaska",
+    "position": {"lat": "47.5607135", "lng": "-122.2888273"},
+    "type": ["audible", "vibrate", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Norfolk St",
+    "position": {"lat": "47.5134264", "lng": "-122.2786621"},
     "type": ["audible", "tactile"]
   },
+  {
+    "title": "MLK Jr Wy & S Merton St",
+    "position": {"lat": "47.5172287", "lng": "-122.2792147"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Henderson St ",
+    "position": {"lat": "47.5235248", "lng": "-122.2789173"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Trenton St",
+    "position": {"lat": "47.5242901", "lng": "-122.2787671"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Cloverdale St ",
+    "position": {"lat": "47.5261239", "lng": "-122.2793342"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Thistle St",
+    "position": {"lat": "47.5278639", "lng": "-122.2801788"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Elmgrove St",
+    "position": {"lat": "47.5299518", "lng": "-122.2805609"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Kenyon St ",
+    "position": {"lat": "47.5315342", "lng": "-122.2805518"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Holden St",
+    "position": {"lat": "47.5333758", "lng": "-122.2808394"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Othello St",
+    "position": {"lat": "47.5370326", "lng": "-122.2809324"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Renton St",
+    "position": {"lat": "47.5242901", "lng": "-122.2787671"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Raymond St",
+    "position": {"lat": "47.5479829", "lng": "-122.2866136"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Graham St",
+    "position": {"lat": "47.5460984", "lng": "-122.2857211"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Morgan St",
+    "position": {"lat": "47.5438916", "lng": "-122.2844042"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Holly St",
+    "position": {"lat": "47.5424728", "lng": "-122.2836507"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Willow St",
+    "position": {"lat": "47.5406761", "lng": "-122.2830664"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Myrtle St ",
+    "position": {"lat": "47.5388948", "lng": "-122.2821759"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Orcas St ",
+    "position": {"lat": "47.5512364", "lng": "-122.2879341"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Brandon St ",
+    "position": {"lat": "47.553455", "lng": "-122.2890491"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Hudson St",
+    "position": {"lat": "47.5570534", "lng": "-122.2908884"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Dawson St",
+    "position": {"lat": "47.5552381", "lng": "-122.2901037"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Edmunds St",
+    "position": {"lat": "47.5587132", "lng": "-122.2918698"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Oregon St",
+    "position": {"lat": "47.5629383", "lng": "-122.2945756"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Genesee St",
+    "position": {"lat": "47.5637884", "lng": "-122.2953911"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Dakota St",
+    "position": {"lat": "47.5662814", "lng": "-122.2966672"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Andover St",
+    "position": {"lat": "47.568123", "lng": "-122.2969944"},
+    "type": ["audible", "tactile"],
+    "halfSignal": "true"
+  },
+  {
+    "title": "MLK Jr Wy & S Walden St ",
+    "position": {"lat": "47.5719962", "lng": "-122.2967344"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Hanford St",
+    "position": {"lat": "47.5744964", "lng": "-122.2969461"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "MLK Jr Wy & S Ferdinand St",
+    "position": {"lat": "47.5578761", "lng": "-122.2913689"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "Rainier Av S & S Forest St",
+    "position": {"lat": "47.5775528", "lng": "-122.2975168"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "3rd Avenue & Virginia St",
+    "position": {"lat": "47.6123923", "lng": "-122.3408875"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "4th Avenue & Virginia St ",
+    "position": {"lat": "47.6130609", "lng": "-122.340035"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "5th Avenue & Virginia St",
+    "position": {"lat": "47.6136881", "lng": "-122.339255"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "6th Avenue & Virginia St",
+    "position": {"lat": "47.6143894", "lng": "-122.3383186"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "7th Avenue & Virginia St",
+    "position": {"lat": "47.615055", "lng": "-122.337456"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "8th Avenue & Virginia St",
+    "position": {"lat": "47.6157271", "lng": "-122.3365868"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "9th Avenue & Virginia St",
+    "position": {"lat": "47.6163959", "lng": "-122.3357254"},
+    "type": ["audible", "tactile"]
+  },
+  {
+    "title": "6th Avenue & Denny Way",
+    "position": {"lat": "47.618559", "lng": "-122.345008"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "9th Avenue & Howell/Olive St",
+    "position": {"lat": "47.618559", "lng": "-122.345008"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "9th Avenue & Stewart St",
+    "position": {"lat": "47.6156419", "lng": "-122.3344729"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "9th Avenue & Lenora St",
+    "position": {"lat": "47.6171512", "lng": "-122.337054"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "9th Avenue & Pine St",
+    "position": {"lat": "47.6135254", "lng": "-122.3320429"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Howell Ave & Minor St",
+    "position": {"lat": "47.6168633", "lng": "-122.3305455"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Dexter Ave & Denny St",
+    "position": {"lat": "47.6185492", "lng": "-122.3424076"},
+    "type": ["audible", "vibrate", "tactile"]
+  },
+  {
+    "title": "6th Ave & Bell St",
+    "position": {"lat": "47.616696", "lng": "-122.342216"},
+    "type": ["audible", "vibrate"]
+  },
+  {
+    "title": "Terry & Valley",
+    "position": {"lat": "47.6257441", "lng": "-122.3371289"},
+    "type": ["audible", "tactile"]
+  }
 ]
