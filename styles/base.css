@@ -5,6 +5,7 @@ html, body{
   background-color: black;
   color: white;
   font-family: "APHont", Helvetica, sans-serif;
+  text-align: center;
 }
 
 main{
@@ -17,7 +18,7 @@ section{
   height: 100%;
 }
 
-#map{
+#map, #destMap{
   height: 100%;
 }
 
