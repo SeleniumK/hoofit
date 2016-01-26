@@ -2,8 +2,7 @@
   var pageView = {};
 
   pageView.initPage = function(activePage){
-    $('header h3').show();
-    $('nav').show();
+    $('header').show();
     $('#' + activePage).show().siblings().hide();
   };
 
