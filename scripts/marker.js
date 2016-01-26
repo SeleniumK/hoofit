@@ -3,7 +3,7 @@
 
   Marker.all = [];
 
-
+  //this just pushes to Marker.all. You will need to call clearMakers before using this
   Marker.loadMarker = function(mark){
     Marker.all.push(new google.maps.Marker(mark));
   };
@@ -24,6 +24,11 @@
     Marker.all.forEach(function(marker){
       marker.setMap(map.gMap);
     });
+  };
+
+  //clear out the already set markers
+  Marker.clearMarkers = function(){
+    Marker.all = [];
   };
 
   module.Marker = Marker;

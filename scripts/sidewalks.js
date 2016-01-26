@@ -2,7 +2,7 @@
   var Sidewalk = {};
 
   Sidewalk.missing = [];
-  Sidewalk.markers = {};
+  Sidewalk.markers = [];
 
   Sidewalk.loadSidewalks = function(sws){
     //refactor this to work with real sidewalks too
@@ -15,19 +15,25 @@
     }).map(function(sw){
       //reverse the points to match Google notcation
       //I really hope this makes things easier at some point
-      sw.forEach(function(point){
-         point.reverse();
+      return sw.map(function(point){
+        return Sidewalk.convertToMarker(point.reverse());
       });
-      return sw;
     });
   };
 
-  //convert the sidewalk data points into markers. All of them.
-  //load up each Sidewalk, which is an array of arrays. Get out the array, then turn the points in that array
-  //into objects with lat and long.
-  Sidewalk.convertToMarker = function(sw){
+  //convert sidewalk points into markers
+  Sidewalk.convertToMarker = function(point){
+    return {position: {lat: point[0], lng: point[1]}};
+  };
 
-  }
+  //create markers from the sidewalk points. Not necesserily useful (you will get Too Many Markers), but you can do it.
+  Sidewalk.createMarkers = function(){
+    Sidewalk.missing.forEach(function(sw){
+      sw.forEach(function(point){
+        Marker.loadMarker(point);
+      });
+    });
+  };
 
   Sidewalk.fetchMissingSidewalks = function(){
     $.ajax('/data/missing_sidewalks.json', {
