@@ -2,7 +2,6 @@
   var Sidewalk = {};
 
   Sidewalk.missing = [];
-  Sidewalk.markers = [];
 
   Sidewalk.loadSidewalks = function(sws){
     //refactor this to work with real sidewalks too
@@ -47,12 +46,6 @@
       }
     });
   };
-
-  // Marker.setMarkers = function(){
-  //   Marker.all.forEach(function(marker){
-  //     marker.setMap(map.gMap);
-  //   });
-  // };
 
   module.Sidewalk = Sidewalk;
 })(window);

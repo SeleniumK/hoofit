@@ -9,7 +9,7 @@
   };
 
   //this needs refactoring, since it only works for these accessible markers
-  Marker.fetchMarkers = function(){
+  Marker.fetchAccessibleSignals = function(){
     $.ajax('/data/accessible_signals.json', {
       method: 'GET',
       success: function(data, msg, xhr){
