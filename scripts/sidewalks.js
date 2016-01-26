@@ -8,16 +8,20 @@
     //refactor this to work with real sidewalks too
     Sidewalk.missing = sws.map(function(sw){
       //grab only the data we care about
-      if(sw[9][5].paths) return sw[9][5].paths[0];
+      if(sw[9][5].paths) return [sw[9][5].paths[0], sw[18]];
     }).filter(function(sw){
       //if the data we care about is undefined, skip it
-      if(sw != undefined) return sw;
+      if(sw != undefined){
+        return sw;
+      }
     }).map(function(sw){
       //reverse the points to match Google notcation
       //I really hope this makes things easier at some point
-      return sw.map(function(point){
+      sw[0] = sw[0].map(function(point){
         return Sidewalk.convertToMarker(point.reverse());
       });
+
+      return sw;
     });
   };
 
