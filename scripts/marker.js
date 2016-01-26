@@ -3,10 +3,9 @@
 
   Marker.all = [];
 
-  Marker.loadMarkers = function(marks){
-    Marker.all = marks.map(function(mark){
-      return new google.maps.Marker(mark);
-    });
+
+  Marker.loadMarker = function(mark){
+    Marker.all.push(new google.maps.Marker(mark));
   };
 
   //this needs refactoring, since it only works for these accessible markers
@@ -14,7 +13,9 @@
     $.ajax('/data/accessible_signals.json', {
       method: 'GET',
       success: function(data, msg, xhr){
-        Marker.loadMarkers(data);
+        data.forEach(function(mark){
+          Marker.loadMarker(mark);
+        });
       }
     });
   };
