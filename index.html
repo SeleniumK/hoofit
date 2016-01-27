@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
-    <title>Hoofit!</title>
+    <title>Hoofit - Explore Seattle on foot. Safely.</title>
     <!-- stylesheets -->
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
@@ -12,7 +12,7 @@
   <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
-      <h1>Hoof-It</h1>
+      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
       <nav id="menu">
         <ul>
@@ -30,17 +30,14 @@
         </li>
       </script>
       <section id="home">
-        <div id="overlay">
-          <h1>Hoof-It</h1>
-          <section class="overlaySection">
-            <h2>Get directions to your destination</h2>
-            <a href="/routes" title="Find Route"><button>Find a Route</button></a>
-          </section>
-          <section class="overlaySection">
-            <h2>Find walkable places near you</h2>
-            <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
-          </section>
-        </div>
+        <section class="overlaySection">
+          <h2>Get directions to your destination</h2>
+          <a href="/routes" title="Find Route"><button>Find a Route</button></a>
+        </section>
+        <section class="overlaySection">
+          <h2>Find walkable places near you</h2>
+          <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+        </section>
       </section>
       <section id="routes">
         <fieldset>
@@ -62,12 +59,26 @@
       </section>
       <section id="destinations">
         <form id="destInput">
-          <label for="address">Your location</label>
-          <input type="text" id="address" name="address"/>
+          <label>Your location
+            <input type="text" id="address" name="address" required/>
+          </label>
+          <label>Keyword
+            <input type="text" id="keyword" name="keyword"/>
+          </label>
+          <label>Within
+            <select id="miles">
+              <option value="400">1/4 Mile</option>
+              <option value="800">1/2 Mile</option>
+              <option value="400">1600 Mile</option>
+              <option value="2400">1 1/2 Miles</option>
+              <option value="3200">2 Miles</option>
+            </select>
+          </label>
           <input type="submit" name="destSubmit" value="Find Places"/>
         </form>
         <ul id="destInfo">
         </ul>
+        <p id="errormessage">Couldn't find anything!</p>
       </section>
       <section id="about">
         <p>
@@ -83,8 +94,18 @@
       </section>
       <section id="contact">
         <p>
-          contact testing!
+          The Hoof-It Development team is a student team from CodeFellows in the SLU neighborhood of Seattle.
         </p>
+        <p>This project is open source -- Feel free to <a href="https://github.com/SeleniumK/hoofit">check out our work!</a></p>
+        <div id="email">
+          <h3>Have Questions? Send us an email</h3>
+            <ul>
+              <li><a href="mailto:selena.flannery@gmail.com?Subject=HoofIt">Selena Flannery</a></li>
+              <li><a href="mailto:sawakoyoriko@gmail.com?Subject=HoofIt">Sawako Ishida</a></li>
+              <li><a href="mailto:amyeleek@gmail.com?Subject=HoofIt">Amy Leek</a></li>
+              <li><a href="mailto:willie.richardson72@gmail.com?Subject=HoofIt">Willie Richardson</a></li>
+            </ul>
+        </div>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>

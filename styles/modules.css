@@ -1,8 +1,4 @@
-#overlay{
-  position: relative;;
-  width: 100%;
-  z-index: 99;
-}
+/*landing page*/
 
 .overlaySection{
   width: 35%;
@@ -16,4 +12,9 @@
 
 .overlaySection:nth-child(2){
   float: right;
+}
+
+/*destinations*/
+#errormessage{
+  display:none;
 }

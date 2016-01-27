@@ -1,4 +1,5 @@
 (function(module){
+  var request = {};
 
   var render = function(template){
     return Handlebars.compile($('#' + template).text())
@@ -10,17 +11,20 @@
   };
 
   var searchLocation = function(results, status){
-    var location = results[0].geometry.location;
-    destInfo.initSearch(location);
+    request.location = results[0].geometry.location;
+    destInfo.initSearch();
   };
 
   var popDestinations = function(results, status){
+    var errorMessage = $('#errormessage');
     if(status == google.maps.places.PlacesServiceStatus.OK){
+      errorMessage.hide();
       var template = render('dest-template');
       $('#destInfo').append(results.map(function(dest){
         return template(dest);
       }));
     }else{
+      errorMessage.show();
       console.log('error retrieving places');
     }
   };
@@ -28,9 +32,8 @@
 
   var destInfo = {};
 
- destInfo.initSearch = function(l){
+ destInfo.initSearch = function(){
     var service = new google.maps.places.PlacesService(document.getElementById('destInfo'));
-    var request = {location: l, radius: '500'};
     service.nearbySearch(request, popDestinations);
   };
 
@@ -38,9 +41,11 @@
     $('#destInput').submit(function(e){
       e.preventDefault();
       var address = $('#address').val();
+      request.keyword = $('#keyword').val();
+      request.radius = parseInt($('#miles').val());
       getGeoCode(address, searchLocation);
     });
   }
-  
+
   module.destInfo = destInfo;
 }(window));
