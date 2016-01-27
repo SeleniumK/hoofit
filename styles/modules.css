@@ -17,3 +17,21 @@
 .overlaySection:nth-child(2){
   float: right;
 }
+
+/*Re-writing Google's styles*/
+/*We HAVE to set !importtant because Google is coming in lower down the cascade. I'm just as mad as you are.
+Don't do this ANYWHERE ELSE in the app.*/
+#writtenDirections .adp, .adp table {
+  color: white !important;
+  font-family: "APHont", Helvetica, sans-serif !important;
+  font-size: 1.2em !important;
+}
+
+#writtenDirections .warnbox-content{
+  color: black !important;
+  /*display: none !important; */
+}
+
+.adp-placemark{
+  background-color: black !important;
+}

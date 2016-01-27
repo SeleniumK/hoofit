@@ -14,6 +14,7 @@
       center: {lat: 47.6097, lng: -122.3331}
     });
     directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('writtenDirections'));
 
     var onClickHandler = function(){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
@@ -25,7 +26,8 @@
     directionsService.route({
       origin: document.getElementById('startpoint').value,
       destination: document.getElementById('endpoint').value,
-      travelMode: google.maps.TravelMode.WALKING
+      travelMode: google.maps.TravelMode.WALKING,
+      provideRouteAlternatives: true
     }, function(response, status){
       if(status === google.maps.DirectionsStatus.OK){
         directionsDisplay.setDirections(response);
@@ -37,5 +39,5 @@
 
   module.map = map;
   module.GmapDirections = GmapDirections;
-  
+
 })(window);
