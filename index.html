@@ -42,10 +42,10 @@
       <section id="routes">
         <fieldset>
           <label for="starting">Starting Address:</label>
-          <input type="text" name="starting"/>
+          <input id="startpoint" type="text" name="starting" value="Seattle, WA"/>
           <label for="ending">Destination:</label>
-          <input type="text" name="ending"/>
-          <input type="submit" name="submit" value="Find Route"/>
+          <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
+          <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts (Will be Template)</h3>
           <p>Alert Text (Will be Template)</p>
@@ -82,19 +82,11 @@
       </section>
       <section id="about">
         <p>
-          Mission Statement:
+          Hoofit is a resource for finding safe accesible routes in Seattle for the visually impaired community.
         </p>
-        <ul>
-          <li>Team Members:</li>
-          <li>Sawako Ishida</li>
-          <li>Selena Flannery</li>
-          <li>Amy Leek</li>
-          <li><a href="images/SilverStar.jpg">Willie Richardson</a></li>
-        </ul>
-      </section>
-      <section id="contact">
         <p>
-          The Hoof-It Development team is a student team from CodeFellows in the SLU neighborhood of Seattle.
+          1) HoofIt's main functionality provides the user with the ability to search for the most walkable routes to their selected destination.
+          2) Hoofit also offers recommended destinations based on the most walkable destinations within a radius of selected by the user.
         </p>
         <p>This project is open source -- Feel free to <a href="https://github.com/SeleniumK/hoofit">check out our work!</a></p>
         <div id="email">
@@ -107,19 +99,30 @@
             </ul>
         </div>
       </section>
+      <section id="contact">
+          <ul>
+            <li>Team Members:</li>
+            <li>Sawako Ishida Sawako - Sawako.Yoriko@gmail.com</li>
+            <li>Selena Flannery - Selena.Flannery@gmail.com</li>
+            <li>Amy Leek - AmyeLeek@gmail.com</li>
+            <li>Willie Richardson - Willie.Richardson72@gmail.com</li>
+          </ul>
+      </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script async
+    <script id="gmapUrl" async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
     </script>
     <script src="/scripts/map.js"></script>
     <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
+    <script src="/scripts/sidewalks.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+    <script src="/scripts/mapplugin.js"></script>
   </main>
   </body>
 </html>
