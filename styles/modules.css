@@ -21,17 +21,21 @@
 /*Re-writing Google's styles*/
 /*We HAVE to set !importtant because Google is coming in lower down the cascade. I'm just as mad as you are.
 Don't do this ANYWHERE ELSE in the app.*/
-#writtenDirections .adp, .adp table {
+.adp, .adp table, .adp-list {
   color: white !important;
   font-family: "APHont", Helvetica, sans-serif !important;
   font-size: 1.2em !important;
 }
 
-#writtenDirections .warnbox-content{
+.adp-warnbox{
   color: black !important;
-  /*display: none !important; */
+  display: none !important;
 }
 
-.adp-placemark{
+.adp-placemark, .adp-list{
   background-color: black !important;
+}
+
+.adp-listsel{
+  background-color: #0000FF !important;
 }

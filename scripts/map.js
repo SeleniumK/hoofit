@@ -30,6 +30,15 @@
       provideRouteAlternatives: true
     }, function(response, status){
       if(status === google.maps.DirectionsStatus.OK){
+        //if there are any warnings from Google, put them in the warning box
+        var warn = document.getElementById("warnings");
+        warn.innerHTML = "" + response.routes[0].warnings + "";
+
+        //response object notes:
+        //routes are the main object. We may get more than one of these and have to process them
+        //legs are seperate chunks. I think it only matters with paypoints
+        //steps are what we are probably going to care about, those are the single instructions (turn left and go .5 miles)
+        //response.routes[0].legs[0].steps[0] is the first route, the first leg, the first step.
         directionsDisplay.setDirections(response);
       } else {
         window.alert('Directions request failed due to ' + status);
