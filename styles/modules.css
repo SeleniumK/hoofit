@@ -1,5 +1,8 @@
+/*landing page*/
+
 #overlay{
-  position: relative;;
+  position: relative;
+  
   width: 100%;
   z-index: 99;
 }
@@ -16,4 +19,9 @@
 
 .overlaySection:nth-child(2){
   float: right;
+}
+
+/*destinations*/
+#errormessage{
+  display:none;
 }

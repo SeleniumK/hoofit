@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
-    <title>Hoofit!</title>
+    <title>Hoofit - Explore Seattle on foot. Safely.</title>
     <!-- stylesheets -->
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
@@ -12,7 +12,8 @@
   <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
-      <h1>Hoof-It</h1>
+      <!-- <h1>Hoof-It</h1> -->
+      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
       <nav id="menu">
         <ul>
@@ -30,8 +31,7 @@
         </li>
       </script>
       <section id="home">
-        <div id="overlay">
-          <h1>Hoof-It</h1>
+        <!-- <div id="overlay"> -->
           <section class="overlaySection">
             <h2>Get directions to your destination</h2>
             <a href="/routes" title="Find Route"><button>Find a Route</button></a>
@@ -40,7 +40,7 @@
             <h2>Find walkable places near you</h2>
             <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
           </section>
-        </div>
+        <!-- </div> -->
       </section>
       <section id="routes">
         <fieldset>
@@ -63,7 +63,7 @@
       <section id="destinations">
         <form id="destInput">
           <label>Your location
-            <input type="text" id="address" name="address"/>
+            <input type="text" id="address" name="address" required/>
           </label>
           <label>Keyword
             <input type="text" id="keyword" name="keyword"/>
@@ -81,23 +81,25 @@
         </form>
         <ul id="destInfo">
         </ul>
+        <p id="errormessage">Couldn't find anything!</p>
       </section>
       <section id="about">
         <p>
-          Mission Statement:
+          Hoofit is a resource for finding safe accesible routes in Seattle for the visually impaired community.
         </p>
-        <ul>
-          <li>Team Members:</li>
-          <li>Sawako Ishida</li>
-          <li>Selena Flannery</li>
-          <li>Amy Leek</li>
-          <li><a href="images/SilverStar.jpg">Willie Richardson</a></li>
-        </ul>
+        <p>
+          1) HoofIt's main functionality provides the user with the ability to search for the most walkable routes to their selected destination.
+          2) Hoofit also offers recommended destinations based on the most walkable destinations within a radius of selected by the user.
+        </p>
       </section>
       <section id="contact">
-        <p>
-          contact testing!
-        </p>
+          <ul>
+            <li>Team Members:</li>
+            <li>Sawako Ishida Sawako - Sawako.Yoriko@gmail.com</li>
+            <li>Selena Flannery - Selena.Flannery@gmail.com</li>
+            <li>Amy Leek - AmyeLeek@gmail.com</li>
+            <li>Willie Richardson - Willie.Richardson72@gmail.com</li>
+          </ul>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
@@ -109,6 +111,7 @@
     <script src="/scripts/map.js"></script>
     <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
+    <script src="/scripts/sidewalks.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
