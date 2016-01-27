@@ -45,10 +45,10 @@
       <section id="routes">
         <fieldset>
           <label for="starting">Starting Address:</label>
-          <input type="text" name="starting"/>
+          <input id="startpoint" type="text" name="starting" value="Seattle, WA"/>
           <label for="ending">Destination:</label>
-          <input type="text" name="ending"/>
-          <input type="submit" name="submit" value="Find Route"/>
+          <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
+          <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts (Will be Template)</h3>
           <p>Alert Text (Will be Template)</p>
@@ -90,7 +90,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script async
+    <script id="gmapUrl" async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
     </script>
     <script src="/scripts/map.js"></script>
@@ -99,6 +99,7 @@
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+    <script src="/scripts/mapplugin.js"></script>
   </main>
   </body>
 </html>
