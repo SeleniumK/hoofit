@@ -39,7 +39,7 @@
   };
 
   Sidewalk.fetchMissingSidewalks = function(){
-    $.ajax('/data/missing_sidewalks.json', {
+    $.ajax('/data/sidewalk.json', {
       method: 'GET',
       success: function(data, msg, xhr){
         Sidewalk.loadSidewalks(data);
