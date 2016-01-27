@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width" initial-scale="1">
+    <title>Hoofit!</title>
+    <!-- stylesheets -->
+     <link rel="stylesheet" href="Styles/base.css">
+     <link rel="stylesheet" href="Styles/nav.css">
+     <link rel="stylesheet" href="Styles/modules.css">
+  </head>
+  <style> .hoofitList{list-style-type: none;}</style>
+  <body>
+    <header>
+      <h1>Hoof-It</h1>
+      <h3>Explore Seattle a pie. Con Seguridad</h3>
+      <nav id="menu">
+        <ul>
+          <li><a href="/routes">Rutas</a></li>
+          <li><a href="/destinations">Destinaciones</a></li>
+          <li><a href="/about">Sobre</a></li>
+          <li><a href="/contact">En contacto con nosotros</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div id="overlay">
+          <section class="overlaySection">
+            <h2>Llegar a su destino</h2>
+            <a href="/routes" title="Find Route"><button>Buscar una Ruta</button></a>
+          </section>
+          <section class="overlaySection">
+            <h2>Encontrar lugares caminar cerca de ti</h2>
+            <a href="/destinations" title="Find Place"><button>Encontrar un lugar</button></a>
+          </section>
+        </div>
+      </section>
+      <section id="routes">
+        <fieldset>
+          <label for="starting">Dirección Partida:</label>
+          <input type="text" name="starting"/>
+          <label for="ending">Destination:</label>
+          <input type="text" name="ending"/>
+          <input type="submit" name="submit" value="Find Route"/>
+        </fieldset>
+        <h3> Alertas Rutas (Será Plantilla)</h3>
+          <p> Texto de la Alerta (Será Plantilla)</p>
+        <h3>Direcciones (Será Plantilla)</h3>
+          <p>
+            (Será Plantilla)
+            Direccionnes Escritas.
+          </p>
+          <section id="map">
+          </section>
+      </section>
+      <section id="destinations">
+        <p>
+          destinations testing!
+        </p>
+      </section>
+      <section id="about">
+        <p>
+          Un recurso de seguridad rutas de senderismo accesibles en Seattle.
+        </p>
+        <p>
+          1) La principal funcionalidad proporciona al usuario la capacidad de buscar las rutas más transitable para su destino seleccionado.
+          2) 2) Hoofit también ofrece destinos recomendados basados en los destinos más transitable en un radio de seleccionados por el usuario.
+      </section>
+        </p>
+      </section>
+      <section id="contact">
+        <p>
+          <ul>
+            <li>Miembros del Equipo:</li>
+            <li class="icon-home3">Sawako Ishida - Sawako.Yoriko@gmail.com</li>
+            <li class="icon-home3">Selena Flannery - Selena.Flannery@gmail.com</li>
+            <li class="icon-home3">Amy Leek - AmyeLeek@gmail.com</li>
+            <li class="icon-home3">Willie Richardson - Willie.Richardson72@gmail.com</li>
+          </ul>
+        </p>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/page.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
+    </script>
+    <script src="/scripts/map.js"></script>
+    <script src="/scripts/marker.js"></script>
+    <script src="/scripts/pageView.js"></script>
+    <script src="/scripts/pageController.js"></script>
+    <script src="/scripts/routes.js"></script>
+  </main>
+  </body>
+</html>
