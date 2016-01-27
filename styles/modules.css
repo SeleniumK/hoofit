@@ -1,12 +1,5 @@
 /*landing page*/
 
-#overlay{
-  position: relative;
-  
-  width: 100%;
-  z-index: 99;
-}
-
 .overlaySection{
   width: 35%;
   text-align: center;
