@@ -2,8 +2,11 @@
   var pageView = {};
 
   pageView.initPage = function(activePage){
-    $('header').show();
+    $('nav').show();
     $('#' + activePage).show().siblings().hide();
+    $('.icon-menu3').click(function(e){
+      $('#menu li').toggle();
+    })
   };
 
   module.pageView = pageView;

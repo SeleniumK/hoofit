@@ -9,17 +9,20 @@
   map.initMap = function (){
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
-    var map = new google.maps.Map(document.getElementById('map'),{
+    map.gMap = new google.maps.Map(document.getElementById('map'),{
       zoom: 12,
       center: {lat: 47.6097, lng: -122.3331}
     });
-    directionsDisplay.setMap(map);
+    directionsDisplay.setMap(map.gMap);
     directionsDisplay.setPanel(document.getElementById('writtenDirections'));
 
     var onClickHandler = function(){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };//end of onchange handler
     submitButton.addEventListener('click',onClickHandler);
+
+    //fetch the missing sidewalks data
+    Sidewalk.fetchMissingSidewalks(map.drawSidewalks);
   };
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay){
@@ -44,6 +47,23 @@
         window.alert('Directions request failed due to ' + status);
       }
     });
+  };
+
+  map.drawSidewalks = function(){
+    Sidewalk.missing.forEach(function(sw){
+      map.drawLine(sw.paths);
+    });
+  };
+
+  map.drawLine = function(points){
+    line = new google.maps.Polyline({
+      path: points,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 7
+    });
+
+    line.setMap(map.gMap);
   };
 
   module.map = map;

@@ -1,8 +1,4 @@
-#overlay{
-  position: relative;;
-  width: 100%;
-  z-index: 99;
-}
+/*landing page*/
 
 .overlaySection{
   width: 35%;
@@ -38,4 +34,9 @@ Don't do this ANYWHERE ELSE in the app.*/
 
 .adp-listsel{
   background-color: #0000FF !important;
+}
+
+/*destinations*/
+#errormessage{
+  display:none;
 }

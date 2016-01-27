@@ -18,6 +18,35 @@ section{
   height: 100%;
 }
 
+a{
+  color:inherit;
+  text-align: center;
+}
+
+a:hover{
+  color: blue;
+}
+
+ul{
+  list-style-type: none;
+}
+
+label{
+  display: block;
+}
+
+button{
+  width: 30%;
+  height: 15%;
+  background-color: white;
+}
+
+button:hover{
+  background-color: blue;
+  color: white;
+}
+
+
 #map, #destMap{
   height: 100%;
 }
@@ -27,14 +56,12 @@ section{
   font-size: 1.5em;
   text-align: center;
 }
-ul{
-  list-style-type: none;
+
+#contact{
+  margin-top: 8%;
 }
 
- label{
-  display: block;
-}
-
-#address{
-  /*float: left;*/
+#contact p{
+  margin: 3% auto;
+  width: 75%;
 }
