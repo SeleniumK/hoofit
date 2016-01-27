@@ -62,8 +62,21 @@
       </section>
       <section id="destinations">
         <form id="destInput">
-          <label for="address">Your location</label>
-          <input type="text" id="address" name="address"/>
+          <label>Your location
+            <input type="text" id="address" name="address"/>
+          </label>
+          <label>Keyword
+            <input type="text" id="keyword" name="keyword"/>
+          </label>
+          <label>Within
+            <select id="miles">
+              <option value="400">1/4 Mile</option>
+              <option value="800">1/2 Mile</option>
+              <option value="400">1600 Mile</option>
+              <option value="2400">1 1/2 Miles</option>
+              <option value="3200">2 Miles</option>
+            </select>
+          </label>
           <input type="submit" name="destSubmit" value="Find Places"/>
         </form>
         <ul id="destInfo">

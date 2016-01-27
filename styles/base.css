@@ -30,3 +30,11 @@ section{
 ul{
   list-style-type: none;
 }
+
+ label{
+  display: block;
+}
+
+#address{
+  /*float: left;*/
+}
