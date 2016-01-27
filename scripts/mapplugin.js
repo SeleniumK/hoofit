@@ -19,6 +19,7 @@
         };//end of onchange handler
         submitButton.addEventListener('click',onClickHandler);
       };
+      
         function calculateAndDisplayRoute(directionsService, directionsDisplay){
           directionsService.route({
             origin: document.getElementById('startpoint').value,
@@ -32,9 +33,6 @@
             }
           });
         };
-
-
-
 
   //module
   module.GmapDirections = GmapDirections;
