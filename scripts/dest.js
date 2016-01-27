@@ -16,12 +16,15 @@
   };
 
   var popDestinations = function(results, status){
+    var errorMessage = $('#errormessage');
     if(status == google.maps.places.PlacesServiceStatus.OK){
+      errorMessage.hide();
       var template = render('dest-template');
       $('#destInfo').append(results.map(function(dest){
         return template(dest);
       }));
     }else{
+      errorMessage.show();
       console.log('error retrieving places');
     }
   };
