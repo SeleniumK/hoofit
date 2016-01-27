@@ -5,16 +5,16 @@
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit!</title>
     <!-- stylesheets -->
-     <link rel="stylesheet" href="Styles/base.css">
-     <link rel="stylesheet" href="Styles/nav.css">
+     <link rel="stylesheet" href="styles/base.css">
+     <link rel="stylesheet" href="styles/nav.css">
+     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
     <header>
-      <h1>HoofIt</h1>
+      <h1>Hoof-It</h1>
       <h3>Explore Seattle on foot. Safely</h3>
       <nav id="menu">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/routes">Routes</a></li>
           <li><a href="/destinations">Destinations</a></li>
           <li><a href="/about">About</a></li>
@@ -23,23 +23,63 @@
       </nav>
     </header>
     <main>
+      <script id="dest-template" type="text/x-handlebars-template">
+        <li>
+          {{name}} : {{vicinity}}
+        </li>
+      </script>
       <section id="home">
-          <p>
-
-          </p>
+        <div id="overlay">
+          <h1>Hoof-It</h1>
+          <section class="overlaySection">
+            <h2>Get directions to your destination</h2>
+            <a href="/routes" title="Find Route"><button>Find a Route</button></a>
+          </section>
+          <section class="overlaySection">
+            <h2>Find walkable places near you</h2>
+            <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+          </section>
+        </div>
       </section>
       <section id="routes">
+        <fieldset>
+          <label for="starting">Starting Address:</label>
+          <input id="startpoint" type="text" name="starting" value="Seattle, WA"/>
+          <label for="ending">Destination:</label>
+          <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
+          <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
+        </fieldset>
+        <h3>Route Alerts (Will be Template)</h3>
+          <p>Alert Text (Will be Template)</p>
+        <h3>Directions:(Will be Template)</h3>
+          <p>
+            (Will be Template)
+            written directions.
+          </p>
           <section id="map">
           </section>
-          <p>Map!</p>
-          <p>
-            routes testing!
-          </p>
       </section>
       <section id="destinations">
-        <p>
-          destinations testing!
-        </p>
+        <form id="destInput">
+          <label>Your location
+            <input type="text" id="address" name="address"/>
+          </label>
+          <label>Keyword
+            <input type="text" id="keyword" name="keyword"/>
+          </label>
+          <label>Within
+            <select id="miles">
+              <option value="400">1/4 Mile</option>
+              <option value="800">1/2 Mile</option>
+              <option value="400">1600 Mile</option>
+              <option value="2400">1 1/2 Miles</option>
+              <option value="3200">2 Miles</option>
+            </select>
+          </label>
+          <input type="submit" name="destSubmit" value="Find Places"/>
+        </form>
+        <ul id="destInfo">
+        </ul>
       </section>
       <section id="about">
         <p>
@@ -58,14 +98,18 @@
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
+    <script id="gmapUrl" async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
     </script>
-    <script src="scripts/map.js"></script>
+    <script src="/scripts/map.js"></script>
+    <script src="/scripts/dest.js"></script>
+    <script src="/scripts/marker.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+    <script src="/scripts/mapplugin.js"></script>
   </main>
   </body>
 </html>

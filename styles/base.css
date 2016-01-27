@@ -4,10 +4,12 @@ html, body{
   padding: 0;
   background-color: black;
   color: white;
+  font-family: "APHont", Helvetica, sans-serif;
+  text-align: center;
 }
 
 main{
-  width: 70%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
 }
@@ -16,7 +18,7 @@ section{
   height: 100%;
 }
 
-#map{
+#map, #destMap{
   height: 100%;
 }
 
@@ -27,4 +29,12 @@ section{
 }
 ul{
   list-style-type: none;
+}
+
+ label{
+  display: block;
+}
+
+#address{
+  /*float: left;*/
 }
