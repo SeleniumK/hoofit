@@ -8,7 +8,7 @@ page(':id', function(ctx){
 
 function landing(){
   $('#home').show().siblings().hide();
-  $('header').hide();
+  $('nav').hide();
 }
 
 function googleCall(){
