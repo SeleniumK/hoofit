@@ -27,7 +27,7 @@ Don't do this ANYWHERE ELSE in the app.*/
   font-size: 1.2em !important;
 }
 
-.adp-warnbox{
+#writtenDirections .adp-warnbox{
   color: black !important;
   display: none !important;
 }
