@@ -14,7 +14,7 @@
       center: {lat: 47.6097, lng: -122.3331}
     });
     directionsDisplay.setMap(map);
-
+    
     var onClickHandler = function(){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };//end of onchange handler
@@ -37,5 +37,5 @@
 
   module.map = map;
   module.GmapDirections = GmapDirections;
-  
+
 })(window);
