@@ -8,8 +8,12 @@ page(':id', function(ctx){
 
 function landing(){
   $('#home').show().siblings().hide();
-  $('header h3').hide();
-  $('nav').hide();
+  $('header').hide();
+}
+
+function googleCall(){
+  map.initMap();
+  destInfo.initPage();
 }
 
 page();

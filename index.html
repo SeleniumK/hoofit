@@ -5,9 +5,9 @@
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit!</title>
     <!-- stylesheets -->
-     <link rel="stylesheet" href="Styles/base.css">
-     <link rel="stylesheet" href="Styles/nav.css">
-     <link rel="stylesheet" href="Styles/modules.css">
+     <link rel="stylesheet" href="styles/base.css">
+     <link rel="stylesheet" href="styles/nav.css">
+     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <style> .hoofitList{list-style-type: none;}</style>
   <body>
@@ -24,8 +24,14 @@
       </nav>
     </header>
     <main>
+      <script id="dest-template" type="text/x-handlebars-template">
+        <li>
+          {{name}} : {{vicinity}}
+        </li>
+      </script>
       <section id="home">
         <div id="overlay">
+          <h1>Hoof-It</h1>
           <section class="overlaySection">
             <h2>Get directions to your destination</h2>
             <a href="/routes" title="Find Route"><button>Find a Route</button></a>
@@ -55,9 +61,13 @@
           </section>
       </section>
       <section id="destinations">
-        <p>
-          destinations testing!
-        </p>
+        <form id="destInput">
+          <label for="address">Your location</label>
+          <input type="text" id="address" name="address"/>
+          <input type="submit" name="destSubmit" value="Find Places"/>
+        </form>
+        <ul id="destInfo">
+        </ul>
       </section>
       <section id="about">
         <p>
@@ -78,12 +88,13 @@
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
     <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&signed_in=true&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
     </script>
-    <!-- <script id="gmapUrl" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&signed_in=true&callback=map.initMap" async defer></script> -->
     <script src="/scripts/map.js"></script>
+    <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
