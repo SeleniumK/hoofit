@@ -1,52 +1,42 @@
 (function(module){
   //DirectionsService object
-  var DirectionsService = {};
+  var GmapDirections = {};
+  var submitButton = document.getElementById('submitinfo');
+  var gmapUrl = document.getElementById('gmapUrl');
 
-  DirectionsService.route = function (){
     //submit button with click eventlistener
-    var submitButton = document.getElementById('submitinfo');
-    var gmapUrl = document.getElementById('gmapUrl');
-    submitButton.addEventListener('click', function(event){
-      event.preventDefault();
+      function initMap(){
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'),{
+          zoom: 12,
+          center: {lat: 47.6097, lng: -122.3331}
+        });
+        directionsDisplay.setMap(map);
 
-      //user request object
-      var request = {
-        origin: '',
-        destination: '',
-        travelMode: ''
+        var onClickHandler = function(){
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };//end of onchange handler
+        submitButton.addEventListener('click',onClickHandler);
       };
-      //grabing user input and pushing data to request object (to line 10-14)
-      request.origin = document.getElementById('startpoint').value;
-      request.destination = document.getElementById('endpoint').value;
-      request.travelMode = 'walking';
-      console.log(request);
+        function calculateAndDisplayRoute(directionsService, directionsDisplay){
+          directionsService.route({
+            origin: document.getElementById('startpoint').value,
+            destination: document.getElementById('endpoint').value,
+            travelMode: google.maps.TravelMode.WALKING
+          }, function(response, status){
+            if(status === google.maps.DirectionsStatus.OK){
+              directionsDisplay.setDirections(response);
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+          });
+        };
 
-      $.ajax({
-        url: '"https://maps.googleapis.com/maps/api/directions/json?origin=' + request.origin + '&destination=' + request.destination + '&mode=walking&key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I"',
-        type: 'GET',
-        success: function(data, message, xhr){
-          console.log(xhr);
-          console.log(message);
-          console.log(data);
-          console.log(url);
-        }
-      });//end of ajax call
-      //replacing initializing gmap url in index.htlm to new url with directions
-      // gmapUrl.src = '"https://maps.googleapis.com/maps/api/directions/json?origin=' + request.origin + '&destination=' + request.destination + '&avoid=highways&mode=walking&key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I"';
-      // var directionsDisplay = new google.maps.DirectionsRenderer({
-      //   map: map
-      // });
-      // var directionsService = new google.maps.DirectionsService();
-      // directionsService.route(request, function(response, status){
-      //   if(status == google.maps.DirectionStatus.OK){
-      //     directionsDisplay.setDirections(response);
-      //   }
-      // });
-    }); //closing of eventlistener
-  };
-  //just for now twsting purpose
-  DirectionsService.route();
+
+
 
   //module
-  module.DirectionsService = DirectionsService;
+  module.GmapDirections = GmapDirections;
+  module.initMap = initMap;
 })(window);

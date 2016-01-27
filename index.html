@@ -39,9 +39,9 @@
       <section id="routes">
         <fieldset>
           <label for="starting">Starting Address:</label>
-          <input id="startpoint" type="text" name="starting"/>
+          <input id="startpoint" type="text" name="starting" value="Seattle, WA"/>
           <label for="ending">Destination:</label>
-          <input id="endpoint" type="text" name="ending"/>
+          <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts (Will be Template)</h3>
@@ -80,7 +80,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/page.js"></script>
     <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&signed_in=true&callback=initMap">
     </script>
     <script src="/scripts/map.js"></script>
     <script src="/scripts/marker.js"></script>
