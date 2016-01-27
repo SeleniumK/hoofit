@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
-    <title>Hoofit!</title>
+    <title>Hoofit - Explore Seattle on foot. Safely.</title>
     <!-- stylesheets -->
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <h1>Hoof-It</h1>
+      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
       <nav id="menu">
         <ul>
@@ -29,17 +29,14 @@
         </li>
       </script>
       <section id="home">
-        <div id="overlay">
-          <h1>Hoof-It</h1>
-          <section class="overlaySection">
-            <h2>Get directions to your destination</h2>
-            <a href="/routes" title="Find Route"><button>Find a Route</button></a>
-          </section>
-          <section class="overlaySection">
-            <h2>Find walkable places near you</h2>
-            <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
-          </section>
-        </div>
+        <section class="overlaySection">
+          <h2>Get directions to your destination</h2>
+          <a href="/routes" title="Find Route"><button>Find a Route</button></a>
+        </section>
+        <section class="overlaySection">
+          <h2>Find walkable places near you</h2>
+          <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+        </section>
       </section>
       <section id="routes">
         <fieldset>
@@ -62,7 +59,7 @@
       <section id="destinations">
         <form id="destInput">
           <label>Your location
-            <input type="text" id="address" name="address"/>
+            <input type="text" id="address" name="address" required/>
           </label>
           <label>Keyword
             <input type="text" id="keyword" name="keyword"/>
@@ -80,21 +77,24 @@
         </form>
         <ul id="destInfo">
         </ul>
+        <p id="errormessage">Couldn't find anything!</p>
       </section>
       <section id="about">
-        <p>
-          Mission Statement:
-        </p>
-          <p>Team Members:</p>
-          <p><a href="images/">Sawako Ishida</a></p>
-          <p><a href="images/">Selena Flannery</a></p>
-          <p><a href="images/">Amy Leek</a></p>
-          <p><a href="images/SilverStar.jpg">Willie Richardson</a></p>
+
+
       </section>
       <section id="contact">
-        <p>
-          contact testing!
-        </p>
+        <p>The Hoof-It Development team is a student team from CodeFellows, based in the SLU neighborhood of Seattle.</p>
+        <p>This project is open source -- Feel free to <a href="https://github.com/SeleniumK/hoofit">check out our work!</a></p>
+        <div id="email">
+          <h3>Have Questions? Send us an email</h3>
+            <ul>
+              <li><a href="mailto:selena.flannery@gmail.com?Subject=HoofIt">Selena Flannery</a></li>
+              <li><a href="mailto:sawakoyoriko@gmail.com?Subject=HoofIt">Sawako Ishida</a></li>
+              <li><a href="mailto:amyeleek@gmail.com?Subject=HoofIt">Amy Leek</a></li>
+              <li><a href="mailto:willie.richardson72@gmail.com?Subject=HoofIt">Willie Richardson</a></li>
+            </ul>
+        </div>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
@@ -106,6 +106,7 @@
     <script src="/scripts/map.js"></script>
     <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
+    <script src="/scripts/sidewalks.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
