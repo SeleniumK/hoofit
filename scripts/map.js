@@ -10,7 +10,7 @@
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
     map.gMap = new google.maps.Map(document.getElementById('map'),{
-      zoom: 12,
+      zoom: 14,
       center: {lat: 47.6097, lng: -122.3331}
     });
 
