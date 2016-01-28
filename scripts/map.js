@@ -44,10 +44,81 @@
         //steps are what we are probably going to care about, those are the single instructions (turn left and go .5 miles)
         //response.routes[0].legs[0].steps[0] is the first route, the first leg, the first step.
         directionsDisplay.setDirections(response);
+        map.testSteps(response);
       } else {
         window.alert('Directions request failed due to ' + status);
       }
     });
+  };
+
+  map.testSteps = function(response){
+    var steps = response.routes[0].legs[0].steps;
+    //start_point.lat(), start_point.lng()
+    //find if missing sidewalk start is between start_point and end_point for each step of the trip
+    var stepArray = [];
+    var isMissing = false;
+    var sideLat, sideLng;
+
+    var makeSteps = function(direction){
+      //only tests on lat
+      return steps.map(function(step){
+        dircTestStart = step.start_point[direction];
+        direcTestEnd = step.end_point[direction];
+
+        var max = Math.max(dircTestStart(), direcTestEnd());
+        var min = Math.min(dircTestStart(), direcTestEnd());
+
+        return [max, min];
+      });
+    };
+
+    var stepFilter = function(direction){
+      //return true if overlaps missing sidewalk
+      stepArray = makeSteps(direction);
+
+      var k = Sidewalk.missing.filter(function(sidewalk){
+        var latlng = sidewalk.latlng[direction];
+        var l = stepArray[0] > latlng || stepArray[1] < latlng;
+        console.log(l);
+        return l;
+      });
+
+      return k;
+
+      // var i, sideLength = Sidewalk.missing.length;
+      // for(i=0; i<sideLength;i++){
+      //   var latlng = Sidewalk.missing[i].latlng[direction];
+      //    if(step[0] > latlng || step[1] < latlng){
+      //      isMissing = true;
+      //      break;
+      //    };
+      // }
+    };
+
+    function checkStep(direction){
+
+      var returnArray = [];
+
+     returnArray = stepFilter('lat').filter(function(filterArray){
+       stepFilter( 'lng');
+     });
+        // if(isMissing) break;
+
+      return returnArray;
+  }
+
+
+
+  var checkAllSteps = function(){
+    var isMissingArray = checkStep('lat');
+    console.log(isMissingArray);
+    // stepArray = makeSteps('lng');
+    // if(isMissing) checkStep('lng');
+    // console.log(isMissing);
+  };
+
+  checkAllSteps();
+
   };
 
   map.drawSidewalks = function(){
