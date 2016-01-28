@@ -1,23 +1,13 @@
-header img{
-  margin-top: 3%;
-  width: 35%;
-}
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 4%;
-  font-weight: bold;
-}
 
 #menu {
-    width: 100%;
+    max-width: 100%;
     font-size: 1.5em;
     font-weight: bold;
 }
 
 #menu ul {
     height: 80%;
-    padding: 0, 3%;
+    /*padding: 0, 3%;*/
 }
 
 #menu li {
