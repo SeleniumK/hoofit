@@ -18,3 +18,51 @@
 #errormessage{
   display:none;
 }
+
+#about img {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 16em;
+  height: 17em;
+  margin: 3em auto;
+}
+
+#about p {
+  display: inline-block;
+  clear: left;
+  width: 16em;
+  height: 8em;
+  margin: 6em auto;
+  outline: solid blue 2px;
+}
+
+#about img:first-child {
+  float: left;
+}
+
+#about > #selena-about {
+  margin-top: 6em;
+}
+
+@media only screen and (max-width: 1140px) {
+  #about p {
+    display: inline-block;
+    clear: left;
+    width: 16em;
+    height: 8em;
+    margin: 6em 2em;
+    outline: solid red 2px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  #about p {
+    display: inline-block;
+    clear: left;
+    width: 16em;
+    height: 8em;
+    margin: 6em 2em;
+    outline: solid red 2px;
+  }
+}
