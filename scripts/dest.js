@@ -1,8 +1,24 @@
 (function(module){
+  var destView = {
+    info: $('#destInfo'),
+    mapInfo: document.getElementById('destInfo'),
+    template: $('#dest-template'),
+    formButton: $('#destInput'),
+    error: $('#errormessage')
+  };
+
+  var dest = {};
   var request = {};
 
   var render = function(template){
-    return Handlebars.compile($('#' + template).text())
+    return Handlebars.compile(template.text())
+  };
+
+  var appendResults = function(results, temp, domEl){
+    var template = render(temp);
+    domEl.append(results.map(function(r){
+      return template(r);
+    }));
   };
 
   var getGeoCode = function(address, callback){
@@ -12,40 +28,35 @@
 
   var searchLocation = function(results, status){
     request.location = results[0].geometry.location;
-    destInfo.initSearch();
+    dest.initSearch();
   };
 
-  var popDestinations = function(results, status){
-    var errorMessage = $('#errormessage');
-    if(status == google.maps.places.PlacesServiceStatus.OK){
-      errorMessage.hide();
-      var template = render('dest-template');
-      $('#destInfo').append(results.map(function(dest){
-        return template(dest);
-      }));
+    //Google Maps 'OK' = google.maps.places.PlacesServiceStatus.OK. Seems to be
+    //working with just a string, though...
+  dest.populate = function(results, status){
+    if(status == 'OK'){
+      destView.error.hide();
+      appendResults(results, destView.template, destView.info);
     }else{
-      errorMessage.show();
-      console.log('error retrieving places');
+      destView.error.show();
     }
   };
 
-
-  var destInfo = {};
-
- destInfo.initSearch = function(){
-    var service = new google.maps.places.PlacesService(document.getElementById('destInfo'));
-    service.nearbySearch(request, popDestinations);
+ dest.initSearch = function(){
+    var service = new google.maps.places.PlacesService(destView.mapInfo);
+    service.nearbySearch(request, dest.populate);
   };
 
-  destInfo.initPage = function(){
-    $('#destInput').submit(function(e){
+  dest.initPage = function(){
+    destView.formButton.submit(function(e){
       e.preventDefault();
       var address = $('#address').val();
       request.keyword = $('#keyword').val();
       request.radius = parseInt($('#miles').val());
+
       getGeoCode(address, searchLocation);
     });
   }
 
-  module.destInfo = destInfo;
+  module.dest = dest;
 }(window));

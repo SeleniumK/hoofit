@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit - Explore Seattle on foot. Safely.</title>
-    <!-- stylesheets -->
+
+     <link rel="stylesheet" href="styles/fonts.css">
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
      <link rel="stylesheet" href="styles/modules.css">
   </head>
-  <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
-      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
+      <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
+      <div class="icon-menu"></div>
       <nav id="menu">
         <ul>
           <li><a href="/routes">Routes</a></li>
@@ -47,13 +48,12 @@
           <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
-        <h3>Route Alerts (Will be Template)</h3>
-          <p>Alert Text (Will be Template)</p>
-        <h3>Directions:(Will be Template)</h3>
-          <p>
-            (Will be Template)
-            written directions.
-          </p>
+        <h3>Route Alerts</h3>
+        <h3>Directions:</h3>
+          <div id="writtenDirections"></div>
+          <div id="warnings"></div>
+          <a href="#"> See where there are accessible signals!</a>
+          <p id=maploading>Map....loading!</p>
           <section id="map">
           </section>
       </section>
@@ -69,7 +69,7 @@
             <select id="miles">
               <option value="400">1/4 Mile</option>
               <option value="800">1/2 Mile</option>
-              <option value="400">1600 Mile</option>
+              <option value="1600">1 Mile</option>
               <option value="2400">1 1/2 Miles</option>
               <option value="3200">2 Miles</option>
             </select>
@@ -101,20 +101,17 @@
       </section>
       <section id="contact">
           <ul>
-            <li>Team Members:</li>
-            <li>Sawako Ishida Sawako - Sawako.Yoriko@gmail.com</li>
-            <li>Selena Flannery - Selena.Flannery@gmail.com</li>
-            <li>Amy Leek - AmyeLeek@gmail.com</li>
-            <li>Willie Richardson - Willie.Richardson72@gmail.com</li>
+            <p>Team Members:</p>
+            <p>Sawako Ishida Sawako - </p>
+            <p>Selena Flannery - Selena.Flannery@gmail.com</p>
+            <p>Amy Leek - AmyeLeek@gmail.com</p>
+            <p>Willie Richardson - Currently an aspiring software developer. I have done just about everything from interpreting Spanish to working as a backpacking guide.</p>
           </ul>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
-    </script>
     <script src="/scripts/map.js"></script>
     <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
@@ -122,7 +119,9 @@
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
-    <script src="/scripts/mapplugin.js"></script>
+    <script id="gmapUrl" async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+    </script>
   </main>
   </body>
 </html>
