@@ -13,6 +13,7 @@
       zoom: 12,
       center: {lat: 47.6097, lng: -122.3331}
     });
+
     directionsDisplay.setMap(map.gMap);
     directionsDisplay.setPanel(document.getElementById('writtenDirections'));
 
@@ -60,7 +61,7 @@
       path: points,
       strokeColor: '#FF0000',
       strokeOpacity: 0.8,
-      strokeWeight: 7
+      strokeWeight: 5
     });
 
     line.setMap(map.gMap);
