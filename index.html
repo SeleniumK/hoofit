@@ -6,12 +6,11 @@
     <title>Hoofit - Explore Seattle on foot. Safely.</title>
     <!-- stylesheets -->
     <!-- icomoon stylesheet -->
-    <link rel="stylesheet" href="Styles/style.css">
+     <link rel="stylesheet" href="styles/style.css">
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
      <link rel="stylesheet" href="styles/modules.css">
   </head>
-  <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
       <img alt="Hoof It" src="/images/hoofitlogo.png"/>
@@ -51,12 +50,9 @@
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts (Will be Template)</h3>
-          <p>Alert Text (Will be Template)</p>
-        <h3>Directions:(Will be Template)</h3>
-          <p>
-            (Will be Template)
-            written directions.
-          </p>
+          <div id="warnings"></div>
+        <h3>Directions:</h3>
+          <div id="writtenDirections"></div>
           <section id="map">
           </section>
       </section>
@@ -115,9 +111,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
-    </script>
     <script src="/scripts/map.js"></script>
     <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
@@ -125,7 +118,9 @@
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
-    <script src="/scripts/mapplugin.js"></script>
+    <script id="gmapUrl" async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+    </script>
   </main>
   </body>
 </html>
