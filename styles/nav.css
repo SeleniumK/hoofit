@@ -21,8 +21,8 @@ h3 {
 }
 
 #menu li {
-    display: none;
-    /*display: inline;*/
+    /*display: none;*/
+    display: inline;
     padding: 0 3%;
 }
 
@@ -34,15 +34,16 @@ h3 {
 #menu a:hover {
 }
 
-.icon-menu3{
+.icon-menu {
   color: white;
+  font-size: 7em;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   #menu li{
     display: inline;
   }
-  .icon-menu3{
+  .icon-menu{
     display: none;
   }
 }
