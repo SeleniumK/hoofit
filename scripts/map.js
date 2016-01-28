@@ -13,6 +13,8 @@
       zoom: 12,
       center: {lat: 47.6097, lng: -122.3331}
     });
+    
+    $('#loading').hide();
     directionsDisplay.setMap(map.gMap);
 
     var onClickHandler = function(){

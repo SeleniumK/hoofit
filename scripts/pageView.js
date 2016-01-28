@@ -1,11 +1,13 @@
 (function(module){
   var pageView = {};
+
   pageView.clickEvents = function(){
+    var tab = $('#menu a');
     $('.icon-menu3').click(function(e){
       $('#menu li').toggle();
     });
-    $('#menu a').click(function(e){
-      $('#menu a').removeClass('currentpage');
+    tab.click(function(e){
+      tab.removeClass('currentpage');
       $(this).addClass('currentpage');
     });
   };
