@@ -36,6 +36,10 @@ Don't do this ANYWHERE ELSE in the app.*/
   background-color: #0000FF !important;
 }
 
+.adp-substep .adp-stepicon .adp-maneuver{
+  background-image: url(/images/maneuvers.png) !important;
+}
+
 /*destinations*/
 #errormessage{
   display:none;
