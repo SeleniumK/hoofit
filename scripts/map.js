@@ -15,6 +15,7 @@
     });
     directionsDisplay.setMap(map.gMap);
     directionsDisplay.setPanel(document.getElementById('writtenDirections'));
+    $('#maploading').hide();
 
     var onClickHandler = function(){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
