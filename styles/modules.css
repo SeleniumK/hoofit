@@ -19,50 +19,62 @@
   display:none;
 }
 
-#about img {
+#routes {
+  height: 100%;
+}
+
+/*about page contole*/
+#about > figure {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+figure div {
   display: inline-block;
-  float: left;
-  clear: left;
-  width: 16em;
-  height: 17em;
-  margin: 3em auto;
+  max-width: 45%;
+  height: 25%;
+  margin: 5% 2%;
 }
 
-#about p {
+figure div img {
+  max-width: 100%;
+}
+
+#selena-about,#sawako-about,#amy-about,#willie-about {
   display: inline-block;
-  clear: left;
-  width: 16em;
-  height: 8em;
-  margin: 6em auto;
-  outline: solid blue 2px;
+  max-width: 45%;
+  height: 25%;
+  margin: 0 2%;
+
+  /*outline: solid 2px red;*/
 }
 
-#about img:first-child {
-  float: left;
-}
-
-#about > #selena-about {
-  margin-top: 6em;
-}
-
-@media only screen and (max-width: 1140px) {
-  #about p {
+/*about page responsiveness contole*/
+@media only screen and (max-width: 794px){
+  #about img {
     display: inline-block;
-    clear: left;
-    width: 16em;
-    height: 8em;
-    margin: 6em 2em;
-    outline: solid red 2px;
+    max-width: 100%;
+    margin: 2% auto;
+  }
+
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    max-width: 90%;
+    max-height: 10%;
+    margin: 0 auto;
+    font-size: 1em;
+    /*outline: solid 2px red;*/
   }
 }
 
-@media only screen and (max-width: 1080px) {
-  #about p {
-    display: inline-block;
-    clear: left;
-    width: 16em;
-    height: 8em;
-    margin: 6em 2em;
-    outline: solid red 2px;
+@media only screen and (max-width: 504px){
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    width: 15em;
+    height: 5em;
+    margin: 0 auto;
+    font-size: 1em;
+    overflow: scroll;
+    /*outline: solid 2px red;*/
   }
 }
