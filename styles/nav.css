@@ -62,3 +62,9 @@ h3 {
     display: none;
   }
 }
+
+/*sticky header css*/
+
+.sticky {
+  position: fixed;
+}
