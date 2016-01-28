@@ -53,68 +53,51 @@
 
   map.testSteps = function(response){
     var steps = response.routes[0].legs[0].steps;
-    //start_point.lat(), start_point.lng()
-    //find if missing sidewalk start is between start_point and end_point for each step of the trip
-    var stepArray = [];
-    var isMissing = false;
-    var sideLat, sideLng;
 
-    var makeSteps = function(direction){
-      //only tests on lat
-      return steps.map(function(step){
-        dircTestStart = step.start_point[direction];
-        direcTestEnd = step.end_point[direction];
+    function checkStep(square, step){
+      var returnArray = Sidewalk.missing.filter(function(sidewalk){
+       var a = dotProduct(sidewalk, step), b;
 
-        var max = Math.max(dircTestStart(), direcTestEnd());
-        var min = Math.min(dircTestStart(), direcTestEnd());
-
-        return [max, min];
-      });
-    };
-
-    var stepFilter = function(direction){
-      //return true if overlaps missing sidewalk
-      stepArray = makeSteps(direction);
-
-      var k = Sidewalk.missing.filter(function(sidewalk){
-        var latlng = sidewalk.latlng[direction];
-        var l = stepArray[0] > latlng || stepArray[1] < latlng;
-        console.log(l);
-        return l;
-      });
-
-      return k;
-
-      // var i, sideLength = Sidewalk.missing.length;
-      // for(i=0; i<sideLength;i++){
-      //   var latlng = Sidewalk.missing[i].latlng[direction];
-      //    if(step[0] > latlng || step[1] < latlng){
-      //      isMissing = true;
-      //      break;
-      //    };
-      // }
-    };
-
-    function checkStep(direction){
-
-      var returnArray = [];
-
-     returnArray = stepFilter('lat').filter(function(filterArray){
-       stepFilter( 'lng');
+       // arccos(dot product over length of AB * length of AC) == angle 
+       b = a > 0 && square > a;
+       return b;
      });
-        // if(isMissing) break;
 
-      return returnArray;
-  }
+     console.log(returnArray);
+     return returnArray;
+   }
 
+  var dotProduct = function(sidewalk, step){
+    var ax = step.start_point.lat(),
+        ay = step.start_point.lng(),
+        bx = step.end_point.lat(),
+        by = step.end_point.lng(),
+        cx = sidewalk.latlng.lat,
+        cy = sidewalk.latlng.lng;
+
+
+    return (bx - ax) * (cx - ax) + (by - ay) * (cy - ay);
+  };
+
+  var squareLength = function(step){
+    var ax = step.start_point.lat(),
+        ay = step.start_point.lng(),
+        bx = step.end_point.lat(),
+        by = step.end_point.lng();
+
+    return (bx - ax) * (bx - ax) + (by - ay) * (by * ay);
+  };
 
 
   var checkAllSteps = function(){
-    var isMissingArray = checkStep('lat');
-    console.log(isMissingArray);
-    // stepArray = makeSteps('lng');
-    // if(isMissing) checkStep('lng');
-    // console.log(isMissing);
+    var filteredArray = [];
+
+    steps.forEach(function(step){
+      var square = squareLength(step);
+      filteredArray.push(checkStep(square, step));
+    });
+
+    console.log(filteredArray);
   };
 
   checkAllSteps();
