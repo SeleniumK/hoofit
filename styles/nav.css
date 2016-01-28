@@ -21,9 +21,15 @@ h3 {
 }
 
 #menu li {
+<<<<<<< HEAD
+    /*display: none;*/
+    display: inline;
+    padding: 0 3%;
+=======
     display: none;
     /*display: inline;*/
     padding: 3% 0;
+>>>>>>> dev
 }
 
 #menu a {
@@ -36,18 +42,23 @@ h3 {
   background: blue;
 }
 
+<<<<<<< HEAD
+.icon-menu {
+=======
 .currentpage{
   background: blue;
 }
 .icon-menu3{
+>>>>>>> dev
   color: white;
+  font-size: 7em;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   #menu li{
     display: inline;
   }
-  .icon-menu3{
+  .icon-menu{
     display: none;
   }
 }
