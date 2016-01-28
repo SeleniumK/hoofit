@@ -10,7 +10,6 @@
      <link rel="stylesheet" href="styles/nav.css">
      <link rel="stylesheet" href="styles/modules.css">
   </head>
-  <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
       <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
@@ -50,12 +49,9 @@
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts</h3>
-          <p>Alert Text</p>
+          <div id="warnings"></div>
         <h3>Directions:</h3>
-          <p>
-            written directions.
-          </p>
-          <h3 id="loading">Loading Map...</h3>
+          <div id="writtenDirections"></div>
           <section id="map">
           </section>
       </section>
