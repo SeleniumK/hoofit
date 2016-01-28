@@ -23,17 +23,22 @@ h3 {
 #menu li {
     display: none;
     /*display: inline;*/
-    padding: 0 3%;
+    padding: 3% 0;
 }
 
 #menu a {
     text-decoration: none;
     color: white;
+    padding: 2%;
 }
 
-#menu a:hover {
+#menu a:hover{
+  background: blue;
 }
 
+.currentpage{
+  background: blue;
+}
 .icon-menu3{
   color: white;
 }
