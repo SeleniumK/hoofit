@@ -13,7 +13,8 @@ function landing(){
 
 function googleCall(){
   map.initMap();
-  destInfo.initPage();
+  dest.initPage();
+  $('#loading').hide();
 }
 
 page();

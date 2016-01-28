@@ -21,20 +21,35 @@ h3 {
 }
 
 #menu li {
+<<<<<<< HEAD
     /*display: none;*/
     display: inline;
     padding: 0 3%;
+=======
+    display: none;
+    /*display: inline;*/
+    padding: 3% 0;
+>>>>>>> dev
 }
 
 #menu a {
     text-decoration: none;
     color: white;
+    padding: 2%;
 }
 
-#menu a:hover {
+#menu a:hover{
+  background: blue;
 }
 
+<<<<<<< HEAD
 .icon-menu {
+=======
+.currentpage{
+  background: blue;
+}
+.icon-menu3{
+>>>>>>> dev
   color: white;
   font-size: 7em;
 }

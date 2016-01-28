@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit - Explore Seattle on foot. Safely.</title>
-    <!-- stylesheets -->
-    <!-- icomoon stylesheet -->
-     <link rel="stylesheet" href="styles/style.css">
+
+     <link rel="stylesheet" href="styles/fonts.css">
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/nav.css">
      <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
     <header>
-      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
+      <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
       <div class="icon-menu"></div>
       <nav id="menu">
@@ -49,10 +48,11 @@
           <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
-        <h3>Route Alerts (Will be Template)</h3>
-          <div id="warnings"></div>
+        <h3>Route Alerts</h3>
         <h3>Directions:</h3>
           <div id="writtenDirections"></div>
+          <div id="warnings"></div>
+          <a href="#"> See where there are accessible signals!</a>
           <p id=maploading>Map....loading!</p>
           <section id="map">
           </section>
@@ -69,7 +69,7 @@
             <select id="miles">
               <option value="400">1/4 Mile</option>
               <option value="800">1/2 Mile</option>
-              <option value="400">1600 Mile</option>
+              <option value="1600">1 Mile</option>
               <option value="2400">1 1/2 Miles</option>
               <option value="3200">2 Miles</option>
             </select>
