@@ -5,34 +5,22 @@
 
   //this just pushes to Marker.all. You will need to call clearMakers before using this
   Marker.loadMarker = function(mark){
-    var image;
-
-    //or I could put an extra field in the JSON. I don't know.
-    if(mark.type.length < 2){
-      image = 'images/audible_logo.png';
-    }else if(mark.type.length == 3){
-      image = 'images/audible_vibrate_tactile_logo.png';
-    }else if(mark.type[1] == 'vibrate'){
-      image = 'images/audible_vibrate_logo.png';
-    }else if(mark.type[1] == 'tactile'){
-      image: 'images/audible_tactile_logo.png';
-    }
-
     Marker.all.push(new google.maps.Marker({
       position: mark.position,
       title: mark.title,
-      icon:image
+      icon:mark.image
     }));
   };
 
   //this needs refactoring, since it only works for these accessible markers
-  Marker.fetchAccessibleSignals = function(){
+  Marker.fetchAccessibleSignals = function(callback){
     $.ajax('/data/accessible_signals.json', {
       method: 'GET',
       success: function(data, msg, xhr){
         data.forEach(function(mark){
           Marker.loadMarker(mark);
         });
+        callback();
       }
     });
   };
