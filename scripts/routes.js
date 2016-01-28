@@ -14,6 +14,7 @@ function landing(){
 function googleCall(){
   map.initMap();
   destInfo.initPage();
+  $('#loading').hide();
 }
 
 page();
