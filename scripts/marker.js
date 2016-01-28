@@ -5,19 +5,17 @@
 
   //this just pushes to Marker.all. You will need to call clearMakers before using this
   Marker.loadMarker = function(mark){
-    var image,
-        audio = 'images/audible_logo.png',
-        vibrate = 'images/vibrate_logo.png',
-        tactile = 'images/tactile_logo.png';
+    var image;
 
     //or I could put an extra field in the JSON. I don't know.
-    //how do we handle multiple types? All are audible, but some are all three and some aren't...
     if(mark.type.length < 2){
-      image = audio;
+      image = 'images/audible_logo.png';
+    }else if(mark.type.length == 3){
+      image = 'images/audible_vibrate_tactile_logo.png';
     }else if(mark.type[1] == 'vibrate'){
-      image = vibrate;
-    }else{
-      image = tactile;
+      image = 'images/audible_vibrate_logo.png';
+    }else if(mark.type[1] == 'tactile'){
+      image: 'images/audible_tactile_logo.png';
     }
 
     Marker.all.push(new google.maps.Marker({
