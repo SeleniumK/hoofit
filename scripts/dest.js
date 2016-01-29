@@ -10,6 +10,17 @@
   var dest = {};
   var request = {};
 
+  var render = function(template){
+    return Handlebars.compile(template.text());
+  };
+
+  var appendResults = function(results, temp, domEl){
+    var template = render(temp);
+    domEl.append(results.map(function(r){
+      return template(r);
+    }));
+  };
+
   var getGeoCode = function(address, callback){
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address' : address}, callback);
@@ -45,7 +56,7 @@
 
       getGeoCode(address, searchLocation);
     });
-  }
+  };
 
   module.dest = dest;
 }(window));
