@@ -73,7 +73,7 @@
         theta2 = Math.atan2((cy - ay), (cx - ax));
 
         var abs = Math.abs((theta2 - theta1)),
-          threshold = Math.PI/10;
+          threshold = Math.PI/30;
 
         var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2),
           abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
@@ -95,9 +95,10 @@
       steps.forEach(function(step){
         //we want an array of arrays we can loop over later
         filteredArray.push(checkStep(step));
+        //render instructions in here, along with warnings? No need for filteredArray
       });
 
-      //display the warnings
+      //display the warnings and instructions
       pageView.displayWarning(filteredArray);
     };
 
