@@ -45,19 +45,10 @@
     var template = render($('#warn-template'));
     warnArray.forEach(function(warn, i){
       if(warn.length > 0){
-        var j = {stepNum: i+1};
-        $('#routeAlerts').append(template(j));
+        $('.adp-directions data-step-index['+ i +']').append(template());
       }
     });
   };
-
-//   var template = render($('#warn-template'));
-//   warnArray.forEach(function(warn, i){
-//     if(warn.length > 0){
-//       $('.adp-directions data-step-index['+ i +']').append(template());
-//     }
-//   });
-// };
 
   pageView.initPage = function(activePage){
     pageView.viewSection(activePage);
