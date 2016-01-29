@@ -36,8 +36,8 @@
     }, function(response, status){
       if(status === google.maps.DirectionsStatus.OK){
         //if there are any warnings from Google, put them in the warning box
-        var warn = document.getElementById("warnings");
-        warn.innerHTML = "" + response.routes[0].warnings + "";
+        var warn = document.getElementById('warnings');
+        warn.innerHTML = '' + response.routes[0].warnings + '';
 
         //response object notes:
         //routes are the main object. We may get more than one of these and have to process them
@@ -57,8 +57,8 @@
 
     function checkStep(step){
     //need step and sidewalk
-    return Sidewalk.missing.filter(function(sidewalk){
-      var missingSidewalk = false,
+      return Sidewalk.missing.filter(function(sidewalk){
+        var missingSidewalk = false,
           ax = step.start_point.lat(),
           ay = step.start_point.lng(),
           bx = step.end_point.lat(),
@@ -66,59 +66,58 @@
           cx = sidewalk.latlng.lat,
           cy = sidewalk.latlng.lng;
 
-      var theta1 = Math.atan2((by - ay), (bx - ax));
-          theta2 = Math.atan2((cy - ay), (cx - ax));
+        var theta1 = Math.atan2((by - ay), (bx - ax));
+        var theta2 = Math.atan2((cy - ay), (cx - ax));
 
-      var abs = Math.abs((theta2 - theta1)),
+        var abs = Math.abs((theta2 - theta1)),
           threshold = Math.PI/10;
 
-      var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2),
+        var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2),
           abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
 
-      if(abs < threshold ||
+        if(abs < threshold ||
          ((abs + 2*Math.PI) < threshold) ||
          (Math.abs(abs - 2*Math.PI) < threshold)){
-           if(acLength < abLength){
-             return missingSidewalk = true;
+          if(acLength < abLength){
+            return missingSidewalk = true;
           }
-         }
+        }
       });
-   }
+    }
 
-  var dotProduct = function(sidewalk, step){
-    var ax = step.start_point.lat(),
+    var dotProduct = function(sidewalk, step){
+      var ax = step.start_point.lat(),
         ay = step.start_point.lng(),
         bx = step.end_point.lat(),
         by = step.end_point.lng(),
         cx = sidewalk.latlng.lat,
         cy = sidewalk.latlng.lng;
 
+      return (bx - ax) * (cx - ax) + (by - ay) * (cy - ay);
+    };
 
-    return (bx - ax) * (cx - ax) + (by - ay) * (cy - ay);
-  };
-
-  var squareLength = function(step){
-    var ax = step.start_point.lat(),
+    var squareLength = function(step){
+      var ax = step.start_point.lat(),
         ay = step.start_point.lng(),
         bx = step.end_point.lat(),
         by = step.end_point.lng();
 
-    return (bx - ax) * (bx - ax) + (by - ay) * (by * ay);
-  };
+      return (bx - ax) * (bx - ax) + (by - ay) * (by * ay);
+    };
 
 
-  var checkAllSteps = function(){
-    var filteredArray = [];
+    var checkAllSteps = function(){
+      var filteredArray = [];
 
-    steps.forEach(function(step){
+      steps.forEach(function(step){
       //var square = squareLength(step);
-      filteredArray.push(checkStep(step));
-    });
+        filteredArray.push(checkStep(step));
+      });
 
-    pageView.displayWarning(filteredArray);
-  };
+      pageView.displayWarning(filteredArray);
+    };
 
-  checkAllSteps();
+    checkAllSteps();
 
   };
 

@@ -5,5 +5,6 @@
     pageView.initPage(activePage);
   };
 
+
   module.pageController = pageController;
 }(window));
