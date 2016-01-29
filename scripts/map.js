@@ -54,17 +54,34 @@
   map.testSteps = function(response){
     var steps = response.routes[0].legs[0].steps;
 
-    function checkStep(square, step){
-      var returnArray = Sidewalk.missing.filter(function(sidewalk){
-       var a = dotProduct(sidewalk, step), b;
+    function checkStep(step){
+    //need step and sidewalk
+    return Sidewalk.missing.filter(function(sidewalk){
+      var missingSidewalk = false,
+          ax = step.start_point.lat(),
+          ay = step.start_point.lng(),
+          bx = step.end_point.lat(),
+          by = step.end_point.lng(),
+          cx = sidewalk.latlng.lat,
+          cy = sidewalk.latlng.lng;
 
-       // arccos(dot product over length of AB * length of AC) == angle 
-       b = a > 0 && square > a;
-       return b;
-     });
+      var theta1 = Math.atan2((by - ay), (bx - ax));
+          theta2 = Math.atan2((cy - ay), (cx - ax));
 
-     console.log(returnArray);
-     return returnArray;
+      var abs = Math.abs((theta2 - theta1)),
+          threshold = Math.PI/10;
+
+      var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2),
+          abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
+
+      if(abs < threshold ||
+         ((abs + 2*Math.PI) < threshold) ||
+         (Math.abs(abs - 2*Math.PI) < threshold)){
+           if(acLength < abLength){
+             return missingSidewalk = true;
+          }
+         }
+      });
    }
 
   var dotProduct = function(sidewalk, step){
@@ -93,11 +110,11 @@
     var filteredArray = [];
 
     steps.forEach(function(step){
-      var square = squareLength(step);
-      filteredArray.push(checkStep(square, step));
+      //var square = squareLength(step);
+      filteredArray.push(checkStep(step));
     });
 
-    console.log(filteredArray);
+    pageView.displayWarning(filteredArray);
   };
 
   checkAllSteps();
