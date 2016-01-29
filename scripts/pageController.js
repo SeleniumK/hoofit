@@ -1,4 +1,4 @@
- (function(module){
+(function(module){
   var pageController = {};
 
   pageController.index = function(activePage){
@@ -6,4 +6,4 @@
   };
 
   module.pageController = pageController;
- }(window));
+}(window));
