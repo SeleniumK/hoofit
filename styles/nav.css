@@ -12,7 +12,7 @@
 }
 
 #menu li {
-    display: none;
+    display: inline;
     /*display: inline;*/
     padding: 3% 0;
 
@@ -34,16 +34,24 @@
 }
 
 .icon-menu{
+  display: none;
   color: white;
   background-color: black;
   font-size: 5em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   #menu li{
-    display: inline;
-  }
-  .icon-menu{
     display: none;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #menu li {
+    display: inline!important;
   }
 }
