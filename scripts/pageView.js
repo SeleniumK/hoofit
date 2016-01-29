@@ -3,7 +3,7 @@
   var pageView = {};
 
   var render = function(template){
-    return Handlebars.compile(template.text())
+    return Handlebars.compile(template.text());
   };
 
   pageView.appendResults = function(results, temp, domEl){
@@ -42,19 +42,10 @@
   };
 
   pageView.displayWarning = function(warnArray){
-<<<<<<< HEAD
     var template = render($('#warn-template'));
-=======
-    var $routeAlerts = $('#routeAlerts');
-    $routeAlerts.empty();
->>>>>>> 948d2e86902244dcf4e1095c03bf7c41a6c162c2
     warnArray.forEach(function(warn, i){
       if(warn.length > 0){
-<<<<<<< HEAD
-        $('.adp-directions data-step-index['+ i +']').append(template());
-=======
-        $routeAlerts.append('There are missing sidewalks near step ' + j + ' of the route. Exercise caution.');
->>>>>>> 948d2e86902244dcf4e1095c03bf7c41a6c162c2
+        $('.adp-directions tr[data-step-index=' + i + ']').append('<span class="warning">!</span> There are missing sidewalks near this step of the route. Exercise caution');
       }
     });
   };

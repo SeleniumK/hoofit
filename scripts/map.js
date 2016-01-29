@@ -58,7 +58,7 @@
       var theta2 = Math.atan2((cy - ay), (cx - ax));
 
       var abs = Math.abs((theta2 - theta1));
-      var threshold = Math.PI/10;
+      var threshold = Math.PI/30;
 
       var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2);
       var abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
@@ -75,10 +75,13 @@
 
   map.checkAllSteps = function(response){
     var steps = response.routes[0].legs[0].steps;
-    var filteredArray = [];
+    var renderArray = [];
 
     steps.forEach(function(step){
-      filteredArray.push(map.checkStep(step));
+      renderArray.push({
+        isMissing: map.checkStep(step),
+        instruction: steps.instructions
+      });
       //render instructions in here, along with warnings? No need for filteredArray
     });
     //display the warnings and instructions
