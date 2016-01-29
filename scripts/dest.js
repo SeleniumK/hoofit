@@ -10,17 +10,6 @@
   var dest = {};
   var request = {};
 
-  var render = function(template){
-    return Handlebars.compile(template.text())
-  };
-
-  var appendResults = function(results, temp, domEl){
-    var template = render(temp);
-    domEl.append(results.map(function(r){
-      return template(r);
-    }));
-  };
-
   var getGeoCode = function(address, callback){
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address' : address}, callback);
@@ -36,13 +25,13 @@
   dest.populate = function(results, status){
     if(status == 'OK'){
       destView.error.hide();
-      appendResults(results, destView.template, destView.info);
+      pageView.appendResults(results, destView.template, destView.info);
     }else{
       destView.error.show();
     }
   };
 
- dest.initSearch = function(){
+  dest.initSearch = function(){
     var service = new google.maps.places.PlacesService(destView.mapInfo);
     service.nearbySearch(request, dest.populate);
   };

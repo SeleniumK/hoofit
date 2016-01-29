@@ -30,6 +30,15 @@
           {{name}} : {{vicinity}}
         </li>
       </script>
+      <script id="warn-template" type="text/x-handlebars-template">
+        <li>
+          There are missing sidewalks near step {{stepNum}} of the route. Exercise caution.
+        </li>
+
+        <!-- <td>
+          <span class="warning">!</span> There are missing sidewalks near this step of the route. Exercise caution.
+        </td> -->
+      </script>
       <section id="home">
         <section class="overlaySection">
           <h2>Get directions to your destination</h2>
@@ -49,7 +58,7 @@
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Route Alerts</h3>
-          <div id=routeAlerts></div>
+          <ul id=routeAlerts></ul>
         <h3>Directions:</h3>
           <div id="writtenDirections"></div>
           <div id="warnings"></div>
