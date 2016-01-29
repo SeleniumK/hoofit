@@ -31,10 +31,12 @@
   };
 
   pageView.displayWarning = function(warnArray){
+    var $routeAlerts = $('#routeAlerts');
+    $routeAlerts.empty();
     warnArray.forEach(function(warn, i){
       var j = i+1;
       if(warn.length > 0){
-        $('#routeAlerts').append('There are missing sidewalks near step ' + j + ' of the route. Exercise caution.');
+        $routeAlerts.append('There are missing sidewalks near step ' + j + ' of the route. Exercise caution.');
       }
     });
   };
