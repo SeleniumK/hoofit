@@ -7,19 +7,15 @@
 
 #menu ul {
     height: 80%;
+    padding: 0;
     /*padding: 0, 3%;*/
 }
 
 #menu li {
-<<<<<<< HEAD
-    /*display: none;*/
-    display: inline;
-    padding: 0 3%;
-=======
     display: none;
     /*display: inline;*/
     padding: 3% 0;
->>>>>>> dev
+
 }
 
 #menu a {
@@ -32,16 +28,15 @@
   background: blue;
 }
 
-<<<<<<< HEAD
-.icon-menu {
-=======
+
 .currentpage{
   background: blue;
 }
-.icon-menu3{
->>>>>>> dev
+
+.icon-menu{
   color: white;
-  font-size: 7em;
+  background-color: black;
+  font-size: 5em;
 }
 
 @media only screen and (min-width: 600px) {

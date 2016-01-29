@@ -18,7 +18,7 @@ a:hover{
   color: blue;
 }
 
-<<<<<<< HEAD
+
 ul{
   list-style-type: none;
 }
@@ -39,8 +39,6 @@ button:hover{
 }
 
 
-=======
->>>>>>> About
 #map, #destMap{
   height: 60%;
 }
@@ -59,14 +57,3 @@ button:hover{
   margin: 3% auto;
   width: 75%;
 }
-<<<<<<< HEAD
-=======
-ul{
-
-  list-style-type: none;
-}
-
- label{
-  display: block;
-}
->>>>>>> About
