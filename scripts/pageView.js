@@ -3,7 +3,7 @@
   var pageView = {};
 
   pageView.hamburgerClick = function(){
-    var hamIcon = $('.icon-menu3');
+    var hamIcon = $('.icon-menu');
     hamIcon.click(function(e){
       $('#menu li').toggle();
     });
@@ -20,9 +20,7 @@
   pageView.viewSection = function(activePage){
     $('nav').show();
     $('#' + activePage).show().siblings().hide();
-    $('.icon-menu').click(function(e){
-      $('#menu li').toggle();
-    })
+    
   };
 
   pageView.showMarkers = function(){
