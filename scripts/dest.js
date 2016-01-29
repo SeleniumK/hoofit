@@ -11,7 +11,7 @@
   var request = {};
 
   var render = function(template){
-    return Handlebars.compile(template.text())
+    return Handlebars.compile(template.text());
   };
 
   var appendResults = function(results, temp, domEl){
@@ -42,7 +42,7 @@
     }
   };
 
- dest.initSearch = function(){
+  dest.initSearch = function(){
     var service = new google.maps.places.PlacesService(destView.mapInfo);
     service.nearbySearch(request, dest.populate);
   };
@@ -56,7 +56,7 @@
 
       getGeoCode(address, searchLocation);
     });
-  }
+  };
 
   module.dest = dest;
 }(window));
