@@ -2,543 +2,543 @@
   {
     "title": "Linden Ave N & N130th St",
     "position": {"lat": 47.7232409, "lng": -122.3435569},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Aurora Ave N & Northgate way",
     "position": {"lat": 47.7050032, "lng": -122.3446007},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Aurora Ave N & N 135th St",
     "position": {"lat": 47.7268929, "lng": -122.3449968},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Greenwood Ave N & 132nd",
     "position": {"lat": 47.7250443, "lng": -122.3555543},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Stone & N 85th St",
     "position": {"lat": 47.6905356, "lng": -122.3412787},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "50th & Fremont Ave",
     "position": {"lat": 47.6650092, "lng": -122.350015},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "15th Ave NE & NE 143rd St",
     "position": {"lat": 47.7321274, "lng": -122.31272},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "15th Ave NE & NE 65th St",
     "position": {"lat": 47.6757855, "lng": -122.3119363},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "15th Ave NE & NE 45th St",
     "position": {"lat": 47.6612684, "lng": -122.3119386},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "20th Ave NE & NE 65th St",
     "position": {"lat": 47.6757859, "lng": -122.3065192},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "35th Ave NE & NE 70th St",
     "position": {"lat": 47.6794195, "lng": -122.2903658},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "31st Ave NE & NE 75 St",
     "position": {"lat": 47.6830507, "lng": -122.294774},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "35th Ave NE & NE 75th St",
     "position": {"lat": 47.68305, "lng": -122.2904652},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Roosevelt Wy NE & NE 45th St",
     "position": {"lat": 47.6613007, "lng": -122.3175711},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "15th Ave NE & NE 45th St",
     "position": {"lat": 47.6612684, "lng": -122.3119386},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "5th Ave NE & NE 112th St",
     "position": {"lat": 47.7095715, "lng": -122.3232502},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "15th Ave NE & NE 120th St",
     "position": {"lat": 47.7157964, "lng": -122.312557},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Sandpoint Way NE & NE 45th St",
     "position": {"lat": 47.6613754, "lng": -122.28722},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Ravenna Ave NE & NE 65th St",
     "position": {"lat": 47.6757769, "lng": -122.3038141},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "31st Ave NE & NE 75 St",
     "position": {"lat": 47.6830507, "lng": -122.294774},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Brooklyn Av NE & NE 45th St",
     "position": {"lat": 47.6612856, "lng": -122.3143002},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "University Way NE & NE 45th St",
     "position": {"lat": 47.661282, "lng": -122.3131454},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Pacific Way NE & Pacific Pl NE",
     "position": {"lat": 47.6506124, "lng": -122.3077202},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "55th Av NE & NE Princeston St",
     "position": {"lat": 47.669342, "lng": -122.276146},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "8th Av NE & Northgate Way NE",
     "position": {"lat": 47.7085803, "lng": -122.3205543},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "20th Av NE & Northgate Way NE",
     "position": {"lat": 47.7084718, "lng": -122.3062377},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "NE 100 & NE 1st Ave",
     "position": {"lat": 47.7013808, "lng": -122.3285084},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "6th Ave NW & Holman Rd NW",
     "position": {"lat": 47.7009776, "lng": -122.363534},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "15th Ave NW & N W 85th St",
     "position": {"lat": 47.6906124, "lng": -122.3768097},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "15th Ave W & W Armour St",
     "position": {"lat": 47.6447801, "lng": -122.3762428},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Mary Ave NW & NW Holman Rd",
     "position": {"lat": 47.6945292, "lng": -122.3756575},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "18th Ave E & E Union St",
     "position": {"lat": 47.6129011, "lng": -122.3088588},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "17TH Ave E & E Madison St",
     "position": {"lat": 47.6155945, "lng": -122.3101428},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "23rd Ave E & E Union St",
     "position": {"lat": 47.6129416, "lng": -122.3027107},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "10th & Roanoke",
     "position": {"lat": 47.6431916, "lng": -122.320069},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "19th & Madison",
     "position": {"lat": 47.6167309, "lng": -122.307411},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Madison Av E & Summit St",
     "position": {"lat": 47.610296, "lng": -122.322774},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Broadway Av & SCCC",
     "position": {"lat": 47.6162774, "lng": -122.3215118},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Boren Av & E Olive St",
     "position": {"lat": 47.6154556, "lng": -122.3307429},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Madison & Summit",
     "position": {"lat": 47.6102711, "lng": -122.3229052},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Olive Way E & E Summit",
     "position": {"lat": 47.6190269, "lng": -122.325167},
-    "type": ["audible", "vibrate"],
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Beacon Av S & S McClellan St",
     "position": {"lat": 47.5786154, "lng": -122.3115947},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "California Ave SW & Fauntleroy Way SW",
     "position": {"lat": 47.5448713, "lng": -122.3872267},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "26th Ave SW SW Barton St",
     "position": {"lat": 47.5209618, "lng": -122.367355},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "27th Av & SW Roxbury",
     "position": {"lat": 47.5173967, "lng": -122.3673026},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "35th Av & SW Roxbury",
     "position": {"lat": 47.5174885, "lng": -122.3768887},
-    "type": ["audible"],
+    "type": ["audible"], "image": "/images/audible_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "Beacon Av S & S McClellan St",
     "position": {"lat": 47.5786154, "lng": -122.3115947},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Rainier & Alaska St",
     "position": {"lat": 47.5607264, "lng": -122.2869898},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "Rainier Av S & S Andover St",
     "position": {"lat": 47.5679461, "lng": -122.2892164},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "5th Ave S & S Jackson St",
     "position": {"lat": 47.5998802, "lng": -122.32756},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "5th Ave S & S Lander St",
     "position": {"lat": 47.5798103, "lng": -122.3267516},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "5th Ave S & S Royal Brougham",
     "position": {"lat": 47.592399, "lng": -122.327452},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "Rainier Av S & S McClellan St",
     "position": {"lat": 47.578351, "lng": -122.2981148},
-    "type": ["audible", "vibrate", "tactile"]
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png"
   },
   {
     "title": "Rainier Av & S 23rd / Hill St",
     "position": {"lat": 47.5845125, "lng": -122.3029634},
-    "type": ["audible", "vibrate", "tactile"]
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Walker St",
     "position": {"lat": 47.5836388, "lng": -122.2981404},
-    "type": ["audible", "vibrate", "tactile"]
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Union St",
     "position": {"lat": 47.6129532, "lng": -122.2961855},
-    "type": ["audible", "vibrate", "tactile"]
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png"
   },
   {
     "title": "23rd Av & E Union St",
     "position": {"lat": 47.6129416, "lng": -122.3027107},
-    "type": ["audible"]
+    "type": ["audible"], "image": "/images/audible_logo.png"
   },
   {
     "title": "35th Av S & Alaska",
     "position": {"lat": 47.5607135, "lng": -122.2888273},
-    "type": ["audible", "vibrate", "tactile"],
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Norfolk St",
     "position": {"lat": 47.5134264, "lng": -122.2786621},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Merton St",
     "position": {"lat": 47.5172287, "lng": -122.2792147},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Henderson St ",
     "position": {"lat": 47.5235248, "lng": -122.2789173},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Trenton St",
     "position": {"lat": 47.5242901, "lng": -122.2787671},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Cloverdale St ",
     "position": {"lat": 47.5261239, "lng": -122.2793342},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Thistle St",
     "position": {"lat": 47.5278639, "lng": -122.2801788},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Elmgrove St",
     "position": {"lat": 47.5299518, "lng": -122.2805609},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Kenyon St ",
     "position": {"lat": 47.5315342, "lng": -122.2805518},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Holden St",
     "position": {"lat": 47.5333758, "lng": -122.2808394},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Othello St",
     "position": {"lat": 47.5370326, "lng": -122.2809324},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Renton St",
     "position": {"lat": 47.5242901, "lng": -122.2787671},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Raymond St",
     "position": {"lat": 47.5479829, "lng": -122.2866136},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Graham St",
     "position": {"lat": 47.5460984, "lng": -122.2857211},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Morgan St",
     "position": {"lat": 47.5438916, "lng": -122.2844042},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Holly St",
     "position": {"lat": 47.5424728, "lng": -122.2836507},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Willow St",
     "position": {"lat": 47.5406761, "lng": -122.2830664},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Myrtle St ",
     "position": {"lat": 47.5388948, "lng": -122.2821759},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Orcas St ",
     "position": {"lat": 47.5512364, "lng": -122.2879341},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Brandon St ",
     "position": {"lat": 47.553455, "lng": -122.2890491},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Hudson St",
     "position": {"lat": 47.5570534, "lng": -122.2908884},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Dawson St",
     "position": {"lat": 47.5552381, "lng": -122.2901037},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Edmunds St",
     "position": {"lat": 47.5587132, "lng": -122.2918698},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Oregon St",
     "position": {"lat": 47.5629383, "lng": -122.2945756},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Genesee St",
     "position": {"lat": 47.5637884, "lng": -122.2953911},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Dakota St",
     "position": {"lat": 47.5662814, "lng": -122.2966672},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Andover St",
     "position": {"lat": 47.568123, "lng": -122.2969944},
-    "type": ["audible", "tactile"],
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png",
     "halfSignal": "true"
   },
   {
     "title": "MLK Jr Wy & S Walden St ",
     "position": {"lat": 47.5719962, "lng": -122.2967344},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Hanford St",
     "position": {"lat": 47.5744964, "lng": -122.2969461},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "MLK Jr Wy & S Ferdinand St",
     "position": {"lat": 47.5578761, "lng": -122.2913689},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "Rainier Av S & S Forest St",
     "position": {"lat": 47.5775528, "lng": -122.2975168},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "3rd Avenue & Virginia St",
     "position": {"lat": 47.6123923, "lng": -122.3408875},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "4th Avenue & Virginia St ",
     "position": {"lat": 47.6130609, "lng": -122.340035},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "5th Avenue & Virginia St",
     "position": {"lat": 47.6136881, "lng": -122.339255},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "6th Avenue & Virginia St",
     "position": {"lat": 47.6143894, "lng": -122.3383186},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "7th Avenue & Virginia St",
     "position": {"lat": 47.615055, "lng": -122.337456},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "8th Avenue & Virginia St",
     "position": {"lat": 47.6157271, "lng": -122.3365868},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "9th Avenue & Virginia St",
     "position": {"lat": 47.6163959, "lng": -122.3357254},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   },
   {
     "title": "6th Avenue & Denny Way",
     "position": {"lat": 47.618559, "lng": -122.345008},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "9th Avenue & Howell/Olive St",
     "position": {"lat": 47.618559, "lng": -122.345008},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "9th Avenue & Stewart St",
     "position": {"lat": 47.6156419, "lng": -122.3344729},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "9th Avenue & Lenora St",
     "position": {"lat": 47.6171512, "lng": -122.337054},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "9th Avenue & Pine St",
     "position": {"lat": 47.6135254, "lng": -122.3320429},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Howell Ave & Minor St",
     "position": {"lat": 47.6168633, "lng": -122.3305455},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Dexter Ave & Denny St",
     "position": {"lat": 47.6185492, "lng": -122.3424076},
-    "type": ["audible", "vibrate", "tactile"]
+    "type": ["audible", "vibrate", "tactile"], "image": "/images/audible_vibrate_tactile_logo.png"
   },
   {
     "title": "6th Ave & Bell St",
     "position": {"lat": 47.616696, "lng": -122.342216},
-    "type": ["audible", "vibrate"]
+    "type": ["audible", "vibrate"], "image": "/images/audible_vibrate_logo.png"
   },
   {
     "title": "Terry & Valley",
     "position": {"lat": 47.6257441, "lng": -122.3371289},
-    "type": ["audible", "tactile"]
+    "type": ["audible", "tactile"], "image": "/images/audible_tactile_logo.png"
   }
 ]

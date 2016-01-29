@@ -10,9 +10,10 @@
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
     map.gMap = new google.maps.Map(document.getElementById('map'),{
-      zoom: 12,
+      zoom: 14,
       center: {lat: 47.6097, lng: -122.3331}
     });
+
     directionsDisplay.setMap(map.gMap);
     directionsDisplay.setPanel(document.getElementById('writtenDirections'));
     $('#maploading').hide();
@@ -61,7 +62,7 @@
       path: points,
       strokeColor: '#FF0000',
       strokeOpacity: 0.8,
-      strokeWeight: 7
+      strokeWeight: 5
     });
 
     line.setMap(map.gMap);
