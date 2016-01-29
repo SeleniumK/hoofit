@@ -7,19 +7,21 @@
   map.gMap = {};
 
   map.calculateAndDisplayRoute = function(directionsService, directionsDisplay){
-    directionsService.route({
-      origin: document.getElementById('startpoint').value,
-      destination: document.getElementById('endpoint').value,
-      travelMode: google.maps.TravelMode.WALKING,
-      provideRouteAlternatives: true
-    }, function(response, status){
-      if(status === google.maps.DirectionsStatus.OK){
-        directionsDisplay.setDirections(response);
-        map.testSteps(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
-    });
+    directionsService.route(
+      {
+        origin: document.getElementById('startpoint').value,
+        destination: document.getElementById('endpoint').value,
+        travelMode: google.maps.TravelMode.WALKING,
+        provideRouteAlternatives: true
+      },
+      function(response, status){
+        if(status === google.maps.DirectionsStatus.OK){
+          directionsDisplay.setDirections(response);
+          map.checkAllSteps(response);
+        } else {
+          console.log('Directions request failed due to ' + status);
+        }
+      });
   };
 
   map.initMap = function (){
@@ -36,60 +38,49 @@
 
     var directionClick = function(){
       map.calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };//end of onchange handler
+    };
 
     submitButton.addEventListener('click', directionClick);
-    //fetch the missing sidewalks data
     Sidewalk.fetchMissingSidewalks(map.drawSidewalks);
   };
 
+  map.checkStep = function(step){
+    return Sidewalk.missing.filter(function(sidewalk){
+      var missingSidewalk = false,
+        ax = step.start_point.lat(),
+        ay = step.start_point.lng(),
+        bx = step.end_point.lat(),
+        by = step.end_point.lng(),
+        cx = sidewalk.latlng.lat,
+        cy = sidewalk.latlng.lng;
 
-  map.testSteps = function(response){
-    var steps = response.routes[0].legs[0].steps;
+      var theta1 = Math.atan2((by - ay), (bx - ax));
+      var theta2 = Math.atan2((cy - ay), (cx - ax));
 
-    function checkStep(step){
-    //need step and sidewalk
-      return Sidewalk.missing.filter(function(sidewalk){
-        var missingSidewalk = false,
-          ax = step.start_point.lat(),
-          ay = step.start_point.lng(),
-          bx = step.end_point.lat(),
-          by = step.end_point.lng(),
-          cx = sidewalk.latlng.lat,
-          cy = sidewalk.latlng.lng;
+      var abs = Math.abs((theta2 - theta1));
+      var threshold = Math.PI/10;
 
-        var theta1 = Math.atan2((by - ay), (bx - ax));
-        var theta2 = Math.atan2((cy - ay), (cx - ax));
+      var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2);
+      var abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
 
-        var abs = Math.abs((theta2 - theta1));
-        var threshold = Math.PI/10;
-
-        var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2);
-        var abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
-
-        if(abs < threshold ||
+      if(abs < threshold ||
          ((abs + 2*Math.PI) < threshold) ||
          (Math.abs(abs - 2*Math.PI) < threshold)){
-          if(acLength < abLength){
-            return missingSidewalk = true;
-          }
+        if(acLength < abLength){
+          return missingSidewalk = true;
         }
-      });
-    }
+      }
+    });
+  };
 
+  map.checkAllSteps = function(response){
+    var steps = response.routes[0].legs[0].steps;
+    var filteredArray = [];
 
-    var checkAllSteps = function(){
-      var filteredArray = [];
-
-      steps.forEach(function(step){
-        filteredArray.push(checkStep(step));
-      });
-
-      pageView.displayWarning(filteredArray);
-    };
-
-    checkAllSteps();
-
+    steps.forEach(function(step){
+      filteredArray.push(map.checkStep(step));
+    });
+    pageView.displayWarning(filteredArray);
   };
 
   map.drawSidewalks = function(){
