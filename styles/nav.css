@@ -1,29 +1,25 @@
-header img{
-  margin-top: 3%;
-  width: 35%;
-}
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 4%;
-  font-weight: bold;
-}
 
 #menu {
-    width: 100%;
+    max-width: 100%;
     font-size: 1.5em;
     font-weight: bold;
 }
 
 #menu ul {
     height: 80%;
-    padding: 0, 3%;
+    /*padding: 0, 3%;*/
 }
 
 #menu li {
+<<<<<<< HEAD
+    /*display: none;*/
+    display: inline;
+    padding: 0 3%;
+=======
     display: none;
     /*display: inline;*/
     padding: 3% 0;
+>>>>>>> dev
 }
 
 #menu a {
@@ -36,18 +32,23 @@ h3 {
   background: blue;
 }
 
+<<<<<<< HEAD
+.icon-menu {
+=======
 .currentpage{
   background: blue;
 }
 .icon-menu3{
+>>>>>>> dev
   color: white;
+  font-size: 7em;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   #menu li{
     display: inline;
   }
-  .icon-menu3{
+  .icon-menu{
     display: none;
   }
 }

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit - Explore Seattle on foot. Safely.</title>
-
-     <link rel="stylesheet" href="styles/fonts.css">
-     <link rel="stylesheet" href="styles/base.css">
-     <link rel="stylesheet" href="styles/nav.css">
-     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
     <header>
       <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
-      <div class="icon-menu3"></div>
+      <div class="icon-menu"></div>
       <nav id="menu">
         <ul>
           <li><a href="/routes">Routes</a></li>
@@ -53,7 +53,8 @@
         <h3>Directions:</h3>
           <div id="writtenDirections"></div>
           <div id="warnings"></div>
-          <a href="#">Add acessible signal markers</a>
+          <a href="#"> See where there are accessible signals!</a>
+          <p id=maploading>Map....loading!</p>
           <section id="map">
           </section>
       </section>
@@ -81,13 +82,19 @@
         <p id="errormessage">Couldn't find anything!</p>
       </section>
       <section id="about">
-        <p>
-          Hoofit is a resource for finding safe accesible routes in Seattle for the visually impaired community.
-        </p>
-        <p>
-          1) HoofIt's main functionality provides the user with the ability to search for the most walkable routes to their selected destination.
-          2) Hoofit also offers recommended destinations based on the most walkable destinations within a radius of selected by the user.
-        </p>
+        <figure>
+          <div><img src="images/selena.png" alt="photo of Selena Flannery"></div>
+            <p id="selena-about">A former Bio student, I have been transitioning into web (and eventually software) development. I have been really enjoying JS, and am looking forward to diving into Python in the next month. Other than programming, I am passionate about theater, music, and environmentalism.</p>
+          <div><img src="images/sawako.png" alt="photo of Sawako Ishida"></div>
+            <p id="sawako-about">I love learning programming, and I would like to be a professional web developer who can code frontend and backend stuff! I love dogs as much as coding!</p>
+          <div><img src="images/amy.png" alt="photo of Amy Leek"></div>
+            <p id="amy-about">A web developer recently out of HP, where I worked on the China web store and the support site. Currently working to modernize my skills and rejoin the industry. Outside of work, I enjoy video games, knitting, and spinning my own yarn.</p>
+          <div><img src="images/willie.png" alt="photo of Willie Richardson"></div>
+            <p id="willie-about">Currently an aspiring software developer. I have done just about everything from interpreting Spanish to working as a backpacking guide.</p>
+        </figure>
+      </section>
+      <section id="contact">
+        <p>The Hoof-It Development team is a student team from CodeFellows, based in the SLU neighborhood of Seattle.</p>
         <p>This project is open source -- Feel free to <a href="https://github.com/SeleniumK/hoofit">check out our work!</a></p>
         <div id="email">
           <h3>Have Questions? Send us an email</h3>
@@ -99,15 +106,7 @@
             </ul>
         </div>
       </section>
-      <section id="contact">
-          <ul>
-            <li>Team Members:</li>
-            <li>Sawako Ishida Sawako - Sawako.Yoriko@gmail.com</li>
-            <li>Selena Flannery - Selena.Flannery@gmail.com</li>
-            <li>Amy Leek - AmyeLeek@gmail.com</li>
-            <li>Willie Richardson - Willie.Richardson72@gmail.com</li>
-          </ul>
-      </section>
+      <footer></footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="/vendor/handlebars.js"></script>

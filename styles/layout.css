@@ -1,0 +1,34 @@
+html, body{
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "APHont", Helvetica, sans-serif;
+  text-align: center;
+}
+
+header {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+main{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+section{
+  max-width: 100%;
+  margin: 0 auto;
+  /*height: 100%;*/
+}
+
+
+footer {
+  max-width: 100%;
+  height: 6em;
+  display: block;
+}

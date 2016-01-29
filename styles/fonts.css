@@ -30,6 +30,9 @@
 .icon-link:before {
     content: "\e901";
 }
+.icon-menu:before {
+    content: "\e902";
+}
 .icon-play3:before {
     content: "\e902";
 }
@@ -51,4 +54,3 @@
 .icon-mail2:before {
     content: "\e908";
 }
-
