@@ -1,0 +1,49 @@
+
+#menu {
+    max-width: 100%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#menu ul {
+    height: 80%;
+    padding: 0;
+    /*padding: 0, 3%;*/
+}
+
+#menu li {
+    display: none;
+    /*display: inline;*/
+    padding: 3% 0;
+
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+}
+
+#menu a:hover{
+  background: blue;
+}
+
+
+.currentpage{
+  background: blue;
+}
+
+.icon-menu{
+  color: white;
+  background-color: black;
+  font-size: 5em;
+}
+
+@media only screen and (min-width: 600px) {
+  #menu li{
+    display: inline;
+  }
+  .icon-menu{
+    display: none;
+  }
+}

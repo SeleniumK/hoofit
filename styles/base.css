@@ -1,0 +1,59 @@
+header img{
+  margin-top: 3%;
+  width: 35%;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 4%;
+  font-weight: bold;
+}
+
+a{
+  color:inherit;
+  text-align: center;
+}
+
+a:hover{
+  color: blue;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+label{
+  display: block;
+}
+
+button{
+  width: 30%;
+  height: 15%;
+  background-color: white;
+}
+
+button:hover{
+  background-color: blue;
+  color: white;
+}
+
+
+#map, #destMap{
+  height: 60%;
+}
+
+#about{
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#contact{
+  margin-top: 8%;
+}
+
+#contact p{
+  margin: 3% auto;
+  width: 75%;
+}

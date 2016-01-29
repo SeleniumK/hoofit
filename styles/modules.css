@@ -1,0 +1,110 @@
+/*landing page*/
+
+.overlaySection{
+  width: 35%;
+  text-align: center;
+  background: black;
+}
+
+.overlaySection:first-child{
+  float: left;
+}
+
+.overlaySection:nth-child(2){
+  float: right;
+}
+
+/*.icon-menu {
+
+}*/
+
+/*Re-writing Google's styles*/
+/*We HAVE to set !importtant because Google is coming in lower down the cascade. I'm just as mad as you are.
+Don't do this ANYWHERE ELSE in the app.*/
+.adp, .adp table, .adp-list {
+  color: white !important;
+  font-family: "APHont", Helvetica, sans-serif !important;
+  font-size: 1.2em !important;
+}
+
+#writtenDirections .adp-warnbox{
+  color: black !important;
+  display: none !important;
+}
+
+.adp-placemark, .adp-list{
+  background-color: black !important;
+}
+
+.adp-listsel{
+  background-color: #0000FF !important;
+}
+
+.adp-substep .adp-stepicon .adp-maneuver{
+  background-image: url(/images/maneuvers.png) !important;
+}
+
+/*destinations*/
+#errormessage{
+  display:none;
+}
+
+#routes {
+  height: 100%;
+}
+
+/*about page contole*/
+#about > figure {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+figure div {
+  display: inline-block;
+  max-width: 45%;
+  height: 25%;
+  margin: 5% 2%;
+}
+
+figure div img {
+  max-width: 100%;
+}
+
+#selena-about,#sawako-about,#amy-about,#willie-about {
+  display: inline-block;
+  max-width: 45%;
+  height: 25%;
+  margin: 0 2%;
+
+  /*outline: solid 2px red;*/
+}
+
+/*about page responsiveness contole*/
+@media only screen and (max-width: 794px){
+  #about img {
+    display: inline-block;
+    max-width: 100%;
+    margin: 2% auto;
+  }
+
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    max-width: 90%;
+    max-height: 10%;
+    margin: 0 auto;
+    font-size: 1em;
+    /*outline: solid 2px red;*/
+  }
+}
+
+@media only screen and (max-width: 504px){
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    width: 15em;
+    height: 5em;
+    margin: 0 auto;
+    font-size: 1em;
+    overflow: scroll;
+    /*outline: solid 2px red;*/
+  }
+}
