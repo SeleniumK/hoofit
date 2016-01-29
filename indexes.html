@@ -3,93 +3,132 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
-    <title>Hoofit!</title>
+    <title>Hoofit - Explore Seattle a pie. Con seguridad.</title>
     <!-- stylesheets -->
-     <link rel="stylesheet" href="Styles/base.css">
-     <link rel="stylesheet" href="Styles/nav.css">
-     <link rel="stylesheet" href="Styles/modules.css">
+    <!-- icomoon stylesheet -->
+     <link rel="stylesheet" href="styles/style.css">
+     <link rel="stylesheet" href="styles/base.css">
+     <link rel="stylesheet" href="styles/nav.css">
+     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
     <header>
-      <h1>Hoof-It</h1>
-      <h3>Explore Seattle a pie. Con Seguridad</h3>
+      <img alt="Hoof It" src="/images/hoofitlogo.png"/>
+      <h3>Explore Seattle a pie. Con seguridad</h3>
+      <div class="icon-menu"></div>
       <nav id="menu">
         <ul>
           <li><a href="/routes">Rutas</a></li>
           <li><a href="/destinations">Destinaciones</a></li>
-          <li><a href="/about">Sobre</a></li>
+          <li><a href="/about">Nuestro Equipo</a></li>
           <li><a href="/contact">En contacto con nosotros</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <script id="dest-template" type="text/x-handlebars-template">
+        <li>
+          {{nombre}} : {{vicinidad}}
+        </li>
+      </script>
       <section id="home">
-        <div id="overlay">
-          <section class="overlaySection">
-            <h2>Llegar a su destino</h2>
-            <a href="/routes" title="Find Route"><button>Buscar una Ruta</button></a>
-          </section>
-          <section class="overlaySection">
-            <h2>Encontrar lugares caminar cerca de ti</h2>
-            <a href="/destinations" title="Find Place"><button>Encontrar un lugar</button></a>
-          </section>
-        </div>
+        <section class="overlaySection">
+          <h2>Llegar a su destino</h2>
+          <a href="/routes" title="Find Route"><button>Buscar una ruta</button></a>
+        </section>
+        <section class="overlaySection">
+          <h2>Encontrares lugares caminables cerca de ti</h2>
+          <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+        </section>
       </section>
       <section id="routes">
         <fieldset>
-          <label for="starting">Dirección Partida:</label>
-          <input type="text" name="starting"/>
-          <label for="ending">Destination:</label>
-          <input type="text" name="ending"/>
-          <input type="submit" name="submit" value="Find Route"/>
+          <label for="starting">Dirección partida:</label>
+          <input id="startpoint" type="text" name="starting" value="Seattle, WA"/>
+          <label for="ending">Destinación:</label>
+          <input id="endpoint" type="text" name="ending" value="Bellevue, WA"/>
+          <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
-        <h3> Alertas Rutas (Será Plantilla)</h3>
-          <p> Texto de la Alerta (Será Plantilla)</p>
-        <h3>Direcciones (Será Plantilla)</h3>
-          <p>
-            (Será Plantilla)
-            Direccionnes Escritas.
-          </p>
+        <h3>Alertas de Ruta! (Será plantilla)</h3>
+          <div id="warnings"></div>
+        <h3>Directions:</h3>
+          <div id="writtenDirections"></div>
+          <p id=maploading>Mapa....Carga!</p>
           <section id="map">
           </section>
       </section>
       <section id="destinations">
-        <p>
-          Destinos de Prueba!
-        </p>
+        <form id="destInput">
+          <label>Su locación
+            <input type="text" id="address" name="address" required/>
+          </label>
+          <label>La palabra clave
+            <input type="text" id="keyword" name="keyword"/>
+          </label>
+          <label>Dentro de
+            <select id="miles">
+              <option value="400">1/4 Milla</option>
+              <option value="800">1/2 Milla</option>
+              <option value="400">1600 Millas</option>
+              <option value="2400">1 1/2 Milla</option>
+              <option value="3200">2 Millas</option>
+            </select>
+          </label>
+          <input type="submit" name="destSubmit" value="Find Places"/>
+        </form>
+        <ul id="destInfo">
+        </ul>
+        <p id="errormessage">No podía encontrar nada!</p>
       </section>
       <section id="about">
+        <video src=""
+         width="400" height="300"
+         preload
+         controls
+         loop>
+         <p>HoofIt..Seattle!</p>
+         </video>
         <p>
-          Un recurso de seguridad rutas de senderismo accesibles en Seattle.
+          Hoofit es un recurso para encontrar rutas seguras accesibles en Seattle para la comunidad con discapacidad visual.
         </p>
         <p>
-          1) La principal funcionalidad proporciona al usuario la capacidad de buscar las rutas más transitable para su destino seleccionado.
-          2) 2) Hoofit también ofrece destinos recomendados basados en los destinos más transitable en un radio de seleccionados por el usuario.
-      </section>
+          1) Las funcionalidades principales de HoofIt proporcionan al usuario la capacidad de buscar las rutas más transitable para su destino seleccionado.
+          2) Hoofit también ofrece destinos en los destinos más transitable en un radio de base recomendados seleccionados por el usuario.
         </p>
+        <p>Este proyecto es open source, no dude en<a href="https://github.com/SeleniumK/hoofit">ver nuestro trabajo!</a></p>
+        <div id="email">
+          <h3>¿Tiene preguntas? Por favor, envíenos un correo electrónico</h3>
+            <ul>
+              <li><a href="mailto:selena.flannery@gmail.com?Subject=HoofIt">Selena Flannery</a></li>
+              <li><a href="mailto:sawakoyoriko@gmail.com?Subject=HoofIt">Sawako Ishida</a></li>
+              <li><a href="mailto:amyeleek@gmail.com?Subject=HoofIt">Amy Leek</a></li>
+              <li><a href="mailto:willie.richardson72@gmail.com?Subject=HoofIt">Willie Richardson</a></li>
+            </ul>
+        </div>
       </section>
       <section id="contact">
-        <p>
           <ul>
-            <li>Miembros del Equipo:</li>
-            <li>Sawako Ishida - Sawako.Yoriko@gmail.com</li>
-            <li>Selena Flannery - Selena.Flannery@gmail.com</li>
-            <li>Amy Leek - AmyeLeek@gmail.com</li>
-            <li>Willie Richardson - Willie.Richardson72@gmail.com</li>
+            <p>Miembros del Equipo:</p>
+            <p>Sawako Ishida Sawako - </p>
+            <p>Selena Flannery - Selena.Flannery@gmail.com</p>
+            <p>Amy Leek - AmyeLeek@gmail.com</p>
+            <p>Willie Richardson - Willie.richardson72@gmail.com</p>
           </ul>
-        </p>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
-    </script>
     <script src="/scripts/map.js"></script>
+    <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
+    <script src="/scripts/sidewalks.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+    <script id="gmapUrl" async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+    </script>
   </main>
   </body>
 </html>
