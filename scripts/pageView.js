@@ -8,7 +8,7 @@
 
   pageView.appendResults = function(results, temp, domEl){
     var template = render(temp);
-    domEl.append(results.map(function(r){
+    domEl.html(results.map(function(r){
       return template(r);
     }));
   };
@@ -37,6 +37,7 @@
   pageView.showMarkers = function(){
     $('#routes a').on('click', function(e){
       e.preventDefault();
+      Marker.clearMarkers();
       Marker.fetchAccessibleSignals(Marker.setMarkers);
     });
   };

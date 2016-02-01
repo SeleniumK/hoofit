@@ -23,7 +23,7 @@
   list-style: none;
 }
 
-#writtenDirections li{
+#writtenDirections ol>li{
   padding: 1em;
 }
 
