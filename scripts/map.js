@@ -33,7 +33,7 @@
     });
 
     directionsDisplay.setMap(map.gMap);
-    directionsDisplay.setPanel(document.getElementById('writtenDirections'));
+    //directionsDisplay.setPanel(document.getElementById('writtenDirections'));
     $('#maploading').hide();
 
     var directionClick = function(){
@@ -44,8 +44,10 @@
     Sidewalk.fetchMissingSidewalks(map.drawSidewalks);
   };
 
+  //Math to calculate if a given point (C, the start point of the missing sidewalk) is on the line AB (the Google route step)
+  //Refactor to add in accessible signals: carve out the middle into a new function we can call with a, b, and c as arguments?
   map.checkStep = function(step){
-    return Sidewalk.missing.filter(function(sidewalk){
+    var missing = Sidewalk.missing.filter(function(sidewalk){
       var missingSidewalk = false,
         ax = step.start_point.lat(),
         ay = step.start_point.lng(),
@@ -71,21 +73,25 @@
         }
       }
     });
+
+    //using a ternary operator to return true or false based on if the calculated array has items in it
+    return missing.length > 0 ? true : false;
   };
 
   map.checkAllSteps = function(response){
     var steps = response.routes[0].legs[0].steps;
     var renderArray = [];
 
-    steps.forEach(function(step){
+    steps.forEach(function(step, i){
       renderArray.push({
-        isMissing: map.checkStep(step),
-        instruction: steps.instructions
+        stepNo: i+1,
+        isMissingSidewalk: map.checkStep(step),
+        instruction: step.instructions
       });
-      //render instructions in here, along with warnings? No need for filteredArray
+      //load in accessible signals as well
     });
     //display the warnings and instructions
-    pageView.displayWarning(filteredArray);
+    pageView.displayWarning(renderArray);
   };
 
   map.drawSidewalks = function(){

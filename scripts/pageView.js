@@ -41,13 +41,8 @@
     });
   };
 
-  pageView.displayWarning = function(warnArray){
-    var template = render($('#warn-template'));
-    warnArray.forEach(function(warn, i){
-      if(warn.length > 0){
-        $('.adp-directions tr[data-step-index=' + i + ']').append('<span class="warning">!</span> There are missing sidewalks near this step of the route. Exercise caution');
-      }
-    });
+  pageView.displayWarning = function(instructions){
+    pageView.appendResults(instructions, $('#warn-template'), $('#writtenDirections ol'));
   };
 
   pageView.initPage = function(activePage){
