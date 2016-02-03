@@ -1,0 +1,38 @@
+#foot1 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  margin-top: 50px;
+  margin-left: "";
+
+-webkit-animation-name: foot1;
+-webkit-animation-duration: 20s;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-delay: 2s;
+}
+
+@-webkit-keyframes foot1 {
+  0%,20%,40%,60%,80%,100% { opacity: 1.0;}
+  10%,30%,50%,70%,90%{opacity: 0.0;}
+}
+
+#foot2 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  margin-bottom: 50px;
+  margin-left: "";
+
+-webkit-animation-name: foot2;
+-webkit-animation-duration: 20s;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes foot2 {
+  0%,20%,40%,60%,80%,100% { opacity: 1.0;}
+  10%,30%,50%,70%,90%{opacity: 0.0;}
+}

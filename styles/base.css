@@ -57,3 +57,13 @@ button:hover{
   margin: 3% auto;
   width: 75%;
 }
+
+#youtube {
+  min-width: 30em;
+  height: 20em;
+}
+
+iframe {
+  max-width: 100%;
+  height: 20em;
+}
