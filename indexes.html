@@ -40,13 +40,14 @@
           <h2>Buscar lugares caminables cerca a ti</h2>
           <a href="/destinations" title="Find Place"><button>Buscar Lugares</button></a>
         </section>
+        <a rel="external" href="http://localhost:3000/">In English</a>
       </section>
       <section id="routes">
         <fieldset>
           <label for="starting">Dirección Partida:</label>
-          <input id="startpoint" type="text" name="starting" value="8th ave NW and NW 89th St, seattle, wa"/>
+          <input id="startpoint" type="text" name="starting" value=""/>
           <label for="ending">Destinación:</label>
-          <input id="endpoint" type="text" name="ending" value="3rd ave NW and NW 89th St, seattle, wa"/>
+          <input id="endpoint" type="text" name="ending" value=""/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Alertas de Ruta</h3>
@@ -96,7 +97,7 @@
       </section>
       <section id="contact">
         <p>El equipo de desarrollo del enganche-It es un equipo de estudiantes de CodeFellows, con sede en el barrio SLU de Seattle.</p>
-        <p>Este proyecto es de código abierto--no dude en<a href="https://github.com/SeleniumK/hoofit">Compruebe hacia fuera nuestro trabajo!</a></p>
+        <p>Este proyecto es de código abierto--no dude en <a href="https://github.com/SeleniumK/hoofit">Compruebe hacia fuera nuestro trabajo!</a></p>
         <div id="email">
           <h3>¿Tiene preguntas? Envíenos un correo electrónico</h3>
             <ul>
@@ -120,7 +121,7 @@
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
     <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&language=es&callback=googleCall">
     </script>
   </main>
   </body>
