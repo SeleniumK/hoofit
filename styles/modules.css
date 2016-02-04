@@ -1,9 +1,4 @@
-#overlay{
-  position: relative;;
-  width: 100%;
-  background: white;
-  z-index: 99;
-}
+/*landing page*/
 
 .overlaySection{
   width: 35%;
@@ -17,4 +12,86 @@
 
 .overlaySection:nth-child(2){
   float: right;
+}
+
+/*.icon-menu {
+
+}*/
+
+/*RIP Google styles, welcome in the new route instructions*/
+#writtenDirections ol{
+  list-style: none;
+}
+
+#writtenDirections ol>li{
+  padding: 1em;
+}
+
+#writtenDirections li span{
+  color: #FF0000;
+}
+
+/*destinations*/
+#errormessage{
+  display:none;
+}
+
+#routes {
+  height: 100%;
+}
+
+/*about page contole*/
+#about > figure {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+figure div {
+  display: inline-block;
+  max-width: 45%;
+  height: 25%;
+  margin: 5% 2%;
+}
+
+figure div img {
+  max-width: 100%;
+}
+
+#selena-about,#sawako-about,#amy-about,#willie-about {
+  display: inline-block;
+  max-width: 45%;
+  height: 25%;
+  margin: 0 2%;
+
+  /*outline: solid 2px red;*/
+}
+
+/*about page responsiveness contole*/
+@media only screen and (max-width: 794px){
+  #about img {
+    display: inline-block;
+    max-width: 100%;
+    margin: 2% auto;
+  }
+
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    max-width: 90%;
+    max-height: 10%;
+    margin: 0 auto;
+    font-size: 1em;
+    /*outline: solid 2px red;*/
+  }
+}
+
+@media only screen and (max-width: 504px){
+  #selena-about,#sawako-about,#amy-about,#willie-about {
+    display: block;
+    width: 15em;
+    height: 5em;
+    margin: 0 auto;
+    font-size: 1em;
+    overflow: scroll;
+    /*outline: solid 2px red;*/
+  }
 }

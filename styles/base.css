@@ -1,24 +1,46 @@
-html, body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: black;
+header img{
+  margin-top: 3%;
+  width: 35%;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 4%;
+  font-weight: bold;
+}
+
+a{
+  color:inherit;
+  text-align: center;
+}
+
+a:hover{
+  color: blue;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+label{
+  display: block;
+}
+
+button{
+  width: 30%;
+  height: 15%;
+  background-color: white;
+}
+
+button:hover{
+  background-color: blue;
   color: white;
-  font-family: "APHont", Helvetica, sans-serif;
 }
 
-main{
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-}
 
-section{
-  height: 100%;
-}
-
-#map{
-  height: 100%;
+#map, #destMap{
+  height: 60%;
 }
 
 #about{
@@ -26,6 +48,22 @@ section{
   font-size: 1.5em;
   text-align: center;
 }
-ul{
-  list-style-type: none;
+
+#contact{
+  margin-top: 8%;
+}
+
+#contact p{
+  margin: 3% auto;
+  width: 75%;
+}
+
+#youtube {
+  min-width: 30em;
+  height: 20em;
+}
+
+iframe {
+  max-width: 100%;
+  height: 20em;
 }

@@ -15,6 +15,11 @@ var requestProxy = require('express-request-proxy'),
 
 app.use(express.static('./'));
 
+app.get('*/es*', function(request, response) {
+  console.log('New request en espanol:', request.url);
+  response.sendFile('indexes.html', { root: '.' });
+});
+
 app.get('*', function(request, response) {
   console.log('New request:', request.url);
   response.sendFile('index.html', { root: '.' });

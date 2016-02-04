@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
-    <title>Hoofit!</title>
-    <!-- stylesheets -->
-     <link rel="stylesheet" href="styles/base.css">
-     <link rel="stylesheet" href="styles/nav.css">
-     <link rel="stylesheet" href="styles/modules.css">
+    <title>Hoofit - Explore Seattle on foot. Safely.</title>
+    <link rel="stylesheet" href="/styles/icomoon.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/animation.css">
   </head>
-  <style> .hoofitList{list-style-type: none;}</style>
   <body>
     <header>
-      <h1>Hoof-It</h1>
+      <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
       <h3>Explore Seattle on foot. Safely</h3>
+      <div class="icon-menu"></div>
       <nav id="menu">
         <ul>
           <li><a href="/routes">Routes</a></li>
@@ -24,71 +26,128 @@
       </nav>
     </header>
     <main>
+      <script id="dest-template" type="text/x-handlebars-template">
+        <li>
+          {{name}} : {{vicinity}}
+        </li>
+      </script>
+      <script id="warn-template" type="text/x-handlebars-template">
+        <li>
+          {{stepNo}}: {{{instruction}}}
+            {{#if isMissingSidewalk}}
+              <p><span>Warning:</span> There are missing sidewalks at points on this step of the route. Please use caution.</p>
+            {{/if}}
+            {{#if isMarker}}
+              <p>Accessible signals on this step:</p>
+              <ul>
+              {{#each isMarker}}
+                <li>{{this.title}}</li>
+              {{/each}}
+              </ul>
+            {{/if}}
+        </li>
+      </script>
       <section id="home">
-        <div id="overlay">
-          <section class="overlaySection">
-            <h2>Get directions to your destination</h2>
-            <a href="/routes" title="Find Route"><button>Find a Route</button></a>
-          </section>
-          <section class="overlaySection">
-            <h2>Find walkable places near you</h2>
-            <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
-          </section>
-        </div>
+        <section class="overlaySection">
+          <h2>Get directions to your destination</h2>
+          <a href="/routes" title="Find Route"><button>Find a Route</button></a>
+        </section>
+        <section class="overlaySection">
+          <h2>Find walkable places near you</h2>
+          <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
+        </section>
+        <a rel="external" href="http://hoofit.herokuapp.com/es">En Espanol</a>
       </section>
       <section id="routes">
         <fieldset>
           <label for="starting">Starting Address:</label>
-          <input type="text" name="starting"/>
+          <input id="startpoint" type="text" name="starting" value=""/>
           <label for="ending">Destination:</label>
-          <input type="text" name="ending"/>
-          <input type="submit" name="submit" value="Find Route"/>
+          <input id="endpoint" type="text" name="ending" value=""/>
+          <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
-        <h3>Route Alerts (Will be Template)</h3>
-          <p>Alert Text (Will be Template)</p>
-        <h3>Directions:(Will be Template)</h3>
-          <p>
-            (Will be Template)
-            written directions.
-          </p>
+        <h3>Directions:</h3>
+          <section id="writtenDirections">
+            <ol>
+            </ol>
+          </section>
+          <div id="warnings"></div>
+          <a href="#"> See where there are accessible signals!</a>
+          <p id="maploading">Map....loading!</p>
           <section id="map">
           </section>
       </section>
       <section id="destinations">
-        <p>
-          destinations testing!
-        </p>
+        <form id="destInput">
+          <label>Your location
+            <input type="text" id="address" name="address" required/>
+          </label>
+          <label>Keyword
+            <input type="text" id="keyword" name="keyword"/>
+          </label>
+          <label>Within
+            <select id="miles">
+              <option value="400">1/4 Mile</option>
+              <option value="800">1/2 Mile</option>
+              <option value="1600">1 Mile</option>
+              <option value="2400">1 1/2 Miles</option>
+              <option value="3200">2 Miles</option>
+            </select>
+          </label>
+          <input type="submit" name="destSubmit" value="Find Places"/>
+        </form>
+        <ul id="destInfo">
+        </ul>
+        <p id="errormessage">Couldn't find anything!</p>
       </section>
       <section id="about">
-        <p>
-          Mission Statement:
-        </p>
-        <ul>
-          <li>Team Members:</li>
-          <li>Sawako Ishida</li>
-          <li>Selena Flannery</li>
-          <li>Amy Leek</li>
-          <li><a href="images/SilverStar.jpg">Willie Richardson</a></li>
-        </ul>
+        <figure>
+          <div><img src="images/selena.png" alt="photo of Selena Flannery"></div>
+            <p id="selena-about">A former Bio student, I have been transitioning into web (and eventually software) development. I have been really enjoying JS, and am looking forward to diving into Python in the next month. Other than programming, I am passionate about theater, music, and environmentalism.</p>
+          <div><img src="images/sawako.png" alt="photo of Sawako Ishida"></div>
+            <p id="sawako-about">I love learning programming, and I would like to be a professional web developer who can code frontend and backend stuff! I love dogs as much as coding!</p>
+          <div><img src="images/amy.png" alt="photo of Amy Leek"></div>
+            <p id="amy-about">A web developer recently out of HP, where I worked on the China web store and the support site. Currently working to modernize my skills and rejoin the industry. Outside of work, I enjoy video games, knitting, and spinning my own yarn.</p>
+          <div><img src="images/willie.png" alt="photo of Willie Richardson"></div>
+            <p id="willie-about">Currently an aspiring software developer. I have done just about everything from interpreting Spanish to working as a backpacking guide.</p>
+        </figure>
       </section>
       <section id="contact">
-        <p>
-          contact testing!
-        </p>
+        <p>The Hoof-It Development team is a student team from CodeFellows, based in the SLU neighborhood of Seattle.</p>
+        <p>This project is open source -- Feel free to <a href="https://github.com/SeleniumK/hoofit">check out our work!</a></p>
+        <div id="email">
+          <h3>Have Questions? Send us an email</h3>
+            <ul>
+              <li><a href="mailto:selena.flannery@gmail.com?Subject=HoofIt">Selena Flannery</a></li>
+              <li><a href="mailto:sawakoyoriko@gmail.com?Subject=HoofIt">Sawako Ishida</a></li>
+              <li><a href="mailto:amyeleek@gmail.com?Subject=HoofIt">Amy Leek</a></li>
+              <li><a href="mailto:willie.richardson72@gmail.com?Subject=HoofIt">Willie Richardson</a></li>
+            </ul>
+        </div>
+        <div id="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6e3z9xEoaN4" frameborder="0" allowfullscreen alt="white pom dog being tickled by an owner on his or her lap"></iframe>
+        </div> <!-- video closing div-->
+        <footer>
+          <img id="foot1" src="images/foot-white.png" alt="animated foot1" />
+          <img id="foot2" src="images/foot2-white.png" alt="animated foot2" />
+        </footer>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/vendor/handlebars.js"></script>
     <script src="/vendor/page.js"></script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&callback=map.initMap">
-    </script>
     <script src="/scripts/map.js"></script>
+    <script src="/scripts/dest.js"></script>
     <script src="/scripts/marker.js"></script>
     <script src="/scripts/elevation.js"></script>
     <script src="/scripts/elevationView.js"></script>
+    <script src="/scripts/sidewalks.js"></script>
     <script src="/scripts/pageView.js"></script>
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
+    <script id="gmapUrl" async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+    </script>
   </main>
   </body>
 </html>

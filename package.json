@@ -1,0 +1,24 @@
+{
+  "name": "hoofit",
+  "version": "0.1.0",
+  "description": "hoofit",
+  "main": "server.js",
+  "dependencies": {
+   "express": "^4.13.3",
+   "express-request-proxy": "^1.0.10"
+ },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeleniumK/hoofit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SeleniumK/hoofit/issues"
+  },
+  "homepage": "https://github.com/SeleniumK/hoofit#readme"
+}

@@ -3,17 +3,24 @@
 
   Marker.all = [];
 
-  Marker.loadMarkers = function(marks){
-    Marker.all = marks.map(function(mark){
-      return new google.maps.Marker(mark);
-    });
+  //this just pushes to Marker.all. You will need to call clearMakers before using this
+  Marker.loadMarker = function(mark){
+    Marker.all.push(new google.maps.Marker({
+      position: mark.position,
+      title: mark.title,
+      icon:mark.image
+    }));
   };
 
-  Marker.fetchMarkers = function(){
+  //this needs refactoring, since it only works for these accessible markers
+  Marker.fetchAccessibleSignals = function(callback){
     $.ajax('/data/accessible_signals.json', {
       method: 'GET',
       success: function(data, msg, xhr){
-        Marker.loadMarkers(data);
+        data.forEach(function(mark){
+          Marker.loadMarker(mark);
+        });
+        callback();
       }
     });
   };
@@ -22,6 +29,17 @@
     Marker.all.forEach(function(marker){
       marker.setMap(map.gMap);
     });
+  };
+
+  //clear out the already set markers
+  Marker.clearMarkers = function(){
+    //unset them from the map
+    Marker.all.forEach(function(mark){
+      mark.setMap(null);
+    });
+
+    //and clear the array
+    Marker.all = [];
   };
 
   module.Marker = Marker;
