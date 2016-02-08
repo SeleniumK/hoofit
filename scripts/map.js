@@ -46,6 +46,10 @@
     Marker.fetchAccessibleSignals();
   };
 
+  map.resizeMap = function(){
+    google.maps.event.trigger(map.gMap, 'resize');
+  };
+
   //Math to calculate if a given point (C, the start point of the missing sidewalk or signal) is on the line AB (the Google route step)
   map.checkPoint = function(ax, ay, bx, by, cx, cy){
       var pointOnLine = false;
