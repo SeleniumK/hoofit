@@ -18,6 +18,7 @@
         if(status === google.maps.DirectionsStatus.OK){
           directionsDisplay.setDirections(response);
           map.checkAllSteps(response);
+          elevation.getRouteElevations(response);
         } else {
           console.log('Directions request failed due to ' + status);
         }
@@ -33,6 +34,7 @@
     });
 
     directionsDisplay.setMap(map.gMap);
+    elevation.initElevator();
     $('#maploading').hide();
 
     var directionClick = function(){

@@ -20,7 +20,7 @@
         data.forEach(function(mark){
           Marker.loadMarker(mark);
         });
-        callback();
+        if(callback){callback();}
       }
     });
   };
