@@ -18,7 +18,6 @@
         if(status === google.maps.DirectionsStatus.OK){
           directionsDisplay.setDirections(response);
           map.checkAllSteps(response);
-          elevation.getRouteElevations(response);
         } else {
           console.log('Directions request failed due to ' + status);
         }
@@ -99,13 +98,16 @@
     var renderArray = [];
 
     steps.forEach(function(step, i){
+      step.stepNo = i+1;
+      
       renderArray.push({
-        stepNo: i+1,
+        stepNo: step.stepNo,
         isMissingSidewalk: map.checkStepSidewalks(step),
         isMarker: map.checkAccessibleMarkers(step),
         instruction: step.instructions
       });
-      //load in accessible signals as well
+      //call elevation for eventual display
+      elevation.getPointElevation(step);
     });
     //display the warnings and instructions
     pageView.displayWarning(renderArray);
