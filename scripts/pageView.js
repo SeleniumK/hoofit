@@ -48,6 +48,7 @@
 
   pageView.initPage = function(activePage){
     pageView.viewSection(activePage);
+    map.resizeMap();
     pageView.hamburgerClick();
     pageView.highlightTab();
     pageView.showMarkers();

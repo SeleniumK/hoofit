@@ -18,6 +18,7 @@
         if(status === google.maps.DirectionsStatus.OK){
           directionsDisplay.setDirections(response);
           map.checkAllSteps(response);
+          elevation.getRouteElevations(response);
         } else {
           console.log('Directions request failed due to ' + status);
         }
@@ -33,6 +34,7 @@
     });
 
     directionsDisplay.setMap(map.gMap);
+    elevation.initElevator();
     $('#maploading').hide();
 
     var directionClick = function(){
@@ -42,6 +44,10 @@
     submitButton.addEventListener('click', directionClick);
     Sidewalk.fetchMissingSidewalks(map.drawSidewalks);
     Marker.fetchAccessibleSignals();
+  };
+
+  map.resizeMap = function(){
+    google.maps.event.trigger(map.gMap, 'resize');
   };
 
   //Math to calculate if a given point (C, the start point of the missing sidewalk or signal) is on the line AB (the Google route step)
