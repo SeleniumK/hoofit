@@ -44,41 +44,45 @@
     Marker.fetchAccessibleSignals();
   };
 
+  map.resizeMap = function(){
+    google.maps.event.trigger(map.gMap, 'resize');
+  };
+
   //Math to calculate if a given point (C, the start point of the missing sidewalk or signal) is on the line AB (the Google route step)
   map.checkPoint = function(ax, ay, bx, by, cx, cy){
-      var pointOnLine = false;
-        // ax = step.start_point.lat(),
-        // ay = step.start_point.lng(),
-        // bx = step.end_point.lat(),
-        // by = step.end_point.lng(),
-        // cx = sidewalk.latlng.lat,
-        // cy = sidewalk.latlng.lng;
+    var pointOnLine = false;
+      // ax = step.start_point.lat(),
+      // ay = step.start_point.lng(),
+      // bx = step.end_point.lat(),
+      // by = step.end_point.lng(),
+      // cx = sidewalk.latlng.lat,
+      // cy = sidewalk.latlng.lng;
 
-      var theta1 = Math.atan2((by - ay), (bx - ax));
-      var theta2 = Math.atan2((cy - ay), (cx - ax));
+    var theta1 = Math.atan2((by - ay), (bx - ax));
+    var theta2 = Math.atan2((cy - ay), (cx - ax));
 
-      var abs = Math.abs((theta2 - theta1));
-      var threshold = Math.PI/10;
+    var abs = Math.abs((theta2 - theta1));
+    var threshold = Math.PI/10;
 
-      var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2);
-      var abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
+    var acLength = Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2);
+    var abLength = Math.pow((bx - ax), 2) + Math.pow((by - ay), 2);
 
-      if(abs < threshold ||
+    if(abs < threshold ||
          ((abs + 2*Math.PI) < threshold) ||
          (Math.abs(abs - 2*Math.PI) < threshold)){
-        if(acLength < abLength){
-          return pointOnLine = true;
-        }
+      if(acLength < abLength){
+        return pointOnLine = true;
       }
     }
+  };
 
   //Refactor to add in accessible signals: carve out the middle into a new function we can call with a, b, and c as arguments?
   map.checkStepSidewalks = function(step){
     var missing = Sidewalk.missing.filter(function(sidewalk){
-     return map.checkPoint(step.start_point.lat(), step.start_point.lng(),
+      return map.checkPoint(step.start_point.lat(), step.start_point.lng(),
                      step.end_point.lat(), step.end_point.lng(),
                      sidewalk.latlng.lat, sidewalk.latlng.lng);
-  });
+    });
     //using a ternary operator to return true or false based on if the calculated array has items in it
     return missing.length > 0 ? true : false;
   };
