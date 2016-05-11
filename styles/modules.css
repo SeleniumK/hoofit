@@ -18,30 +18,17 @@
 
 }*/
 
-/*Re-writing Google's styles*/
-/*We HAVE to set !importtant because Google is coming in lower down the cascade. I'm just as mad as you are.
-Don't do this ANYWHERE ELSE in the app.*/
-.adp, .adp table, .adp-list {
-  color: white !important;
-  font-family: "APHont", Helvetica, sans-serif !important;
-  font-size: 1.2em !important;
+/*RIP Google styles, welcome in the new route instructions*/
+#writtenDirections ol{
+  list-style: none;
 }
 
-#writtenDirections .adp-warnbox{
-  color: black !important;
-  display: none !important;
+#writtenDirections ol>li{
+  padding: 1em;
 }
 
-.adp-placemark, .adp-list{
-  background-color: black !important;
-}
-
-.adp-listsel{
-  background-color: #0000FF !important;
-}
-
-.adp-substep .adp-stepicon .adp-maneuver{
-  background-image: url(/images/maneuvers.png) !important;
+#writtenDirections li span{
+  color: #FF0000;
 }
 
 /*destinations*/

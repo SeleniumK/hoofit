@@ -1,7 +1,8 @@
 page.base('/');
 
 page('', landing);
-page(':id', function(ctx){
+page('es', landing);
+page('(es/)?:id', function(ctx){
   var activePage = ctx.params.id;
   pageController.index(activePage);
 });

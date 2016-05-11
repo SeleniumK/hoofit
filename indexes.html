@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit!</title>
-    <link rel="stylesheet" href="icomoon.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="/styles/icomoon.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/modules.css">
   </head>
   <body>
     <header>
       <img alt="Hoof It Logo" src="/images/hoofitlogo.png"/>
-      <h3>xplore Seattle a pie. Con Seguridad</h3>
+      <h3>Explore Seattle a pie. Con Seguridad</h3>
       <div class="icon-menu"></div>
       <nav id="menu">
         <ul>
-          <li><a href="/routes">Rutas</a></li>
-          <li><a href="/destinations">Destinaciones</a></li>
-          <li><a href="/about">Nuestro Equipo</a></li>
-          <li><a href="/contact">En contacto con nosotros</a></li>
+          <li><a href="/es/routes">Rutas</a></li>
+          <li><a href="/es/destinations">Destinaciones</a></li>
+          <li><a href="/es/about">Nuestro Equipo</a></li>
+          <li><a href="/es/contact">En contacto con nosotros</a></li>
         </ul>
       </nav>
     </header>
@@ -40,13 +40,14 @@
           <h2>Buscar lugares caminables cerca a ti</h2>
           <a href="/destinations" title="Find Place"><button>Buscar Lugares</button></a>
         </section>
+        <a rel="external" href="http://hoofit.herokuapp.com/">In English</a>
       </section>
       <section id="routes">
         <fieldset>
           <label for="starting">Dirección Partida:</label>
-          <input id="startpoint" type="text" name="starting" value="8th ave NW and NW 89th St, seattle, wa"/>
+          <input id="startpoint" type="text" name="starting" value=""/>
           <label for="ending">Destinación:</label>
-          <input id="endpoint" type="text" name="ending" value="3rd ave NW and NW 89th St, seattle, wa"/>
+          <input id="endpoint" type="text" name="ending" value=""/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
         <h3>Alertas de Ruta</h3>
@@ -84,19 +85,19 @@
       </section>
       <section id="about">
         <figure>
-          <div><img src="images/selena.png" alt="photo of Selena Flannery"></div>
+          <div><img src="/images/selena.png" alt="photo of Selena Flannery"></div>
             <p id="selena-about">Un ex estudiante de Bio, he sido desarrollo transición en web (y eventualmente software). Han sido realmente disfrutando de JS y estoy mirando adelante a zambullirse en Python en el próximo mes. Que no sea de programación, soy apasionado por el teatro, la música y el ecologismo.</p>
-          <div><img src="images/sawako.png" alt="photo of Sawako Ishida"></div>
+          <div><img src="/images/sawako.png" alt="photo of Sawako Ishida"></div>
             <p id="sawako-about">Quiero aprender programación y me gustaría ser un desarrollador web profesional que puede codificar cosas frontend y backend! Amo a los perros tanto como codificación!</p>
-          <div><img src="images/amy.png" alt="photo of Amy Leek"></div>
+          <div><img src="/images/amy.png" alt="photo of Amy Leek"></div>
             <p id="amy-about">Un desarrollador web hace poco de HP, donde trabajé en la tienda web de China y el sitio de soporte. Actualmente trabajando para modernizar mis habilidades y reincorporarse a la industria. Fuera del trabajo, me gusta juegos de video, tejer y spinning mi propio hilo.</p>
-          <div><img src="images/willie.png" alt="photo of Willie Richardson"></div>
+          <div><img src="/images/willie.png" alt="photo of Willie Richardson"></div>
             <p id="willie-about">En la actualidad un aspirantes a desarrollador de software. He hecho todo lo que interprete de español a trabajar como guía de mochilero.</p>
         </figure>
       </section>
       <section id="contact">
         <p>El equipo de desarrollo del enganche-It es un equipo de estudiantes de CodeFellows, con sede en el barrio SLU de Seattle.</p>
-        <p>Este proyecto es de código abierto--no dude en<a href="https://github.com/SeleniumK/hoofit">Compruebe hacia fuera nuestro trabajo!</a></p>
+        <p>Este proyecto es de código abierto--no dude en <a href="https://github.com/SeleniumK/hoofit">Compruebe hacia fuera nuestro trabajo!</a></p>
         <div id="email">
           <h3>¿Tiene preguntas? Envíenos un correo electrónico</h3>
             <ul>
@@ -120,7 +121,7 @@
     <script src="/scripts/pageController.js"></script>
     <script src="/scripts/routes.js"></script>
     <script id="gmapUrl" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&callback=googleCall">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQphyrzeP4Ban8JSt8RY4NpZzKUwJ01I&libraries=places&language=es&callback=googleCall">
     </script>
   </main>
   </body>

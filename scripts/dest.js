@@ -36,7 +36,7 @@
   dest.populate = function(results, status){
     if(status == 'OK'){
       destView.error.hide();
-      appendResults(results, destView.template, destView.info);
+      pageView.appendResults(results, destView.template, destView.info);
     }else{
       destView.error.show();
     }

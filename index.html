@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width" initial-scale="1">
     <title>Hoofit - Explore Seattle on foot. Safely.</title>
-    <link rel="stylesheet" href="icomoon.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="/styles/icomoon.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/animation.css">
   </head>
   <body>
     <header>
@@ -31,6 +31,22 @@
           {{name}} : {{vicinity}}
         </li>
       </script>
+      <script id="warn-template" type="text/x-handlebars-template">
+        <li>
+          {{stepNo}}: {{{instruction}}}
+            {{#if isMissingSidewalk}}
+              <p><span>Warning:</span> There are missing sidewalks at points on this step of the route. Please use caution.</p>
+            {{/if}}
+            {{#if isMarker}}
+              <p>Accessible signals on this step:</p>
+              <ul>
+              {{#each isMarker}}
+                <li>{{this.title}}</li>
+              {{/each}}
+              </ul>
+            {{/if}}
+        </li>
+      </script>
       <section id="home">
         <section class="overlaySection">
           <h2>Get directions to your destination</h2>
@@ -40,6 +56,7 @@
           <h2>Find walkable places near you</h2>
           <a href="/destinations" title="Find Place"><button>Find a Place</button></a>
         </section>
+        <a rel="external" href="http://hoofit.herokuapp.com/es">En Espanol</a>
       </section>
       <section id="routes">
         <fieldset>
@@ -49,13 +66,14 @@
           <input id="endpoint" type="text" name="ending" value=""/>
           <input id="submitinfo" type="submit" name="submit" value="Find Route"/>
         </fieldset>
-        <h3>Route Alerts</h3>
-          <div id=routeAlerts></div>
         <h3>Directions:</h3>
-          <div id="writtenDirections"></div>
+          <section id="writtenDirections">
+            <ol>
+            </ol>
+          </section>
           <div id="warnings"></div>
           <a href="#"> See where there are accessible signals!</a>
-          <p id=maploading>Map....loading!</p>
+          <p id="maploading">Map....loading!</p>
           <section id="map">
           </section>
       </section>

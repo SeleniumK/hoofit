@@ -2,6 +2,17 @@
 
   var pageView = {};
 
+  var render = function(template){
+    return Handlebars.compile(template.text());
+  };
+
+  pageView.appendResults = function(results, temp, domEl){
+    var template = render(temp);
+    domEl.html(results.map(function(r){
+      return template(r);
+    }));
+  };
+
   pageView.hamburgerClick = function(){
     var hamIcon = $('.icon-menu');
     hamIcon.click(function(e){
@@ -26,24 +37,19 @@
   pageView.showMarkers = function(){
     $('#routes a').on('click', function(e){
       e.preventDefault();
+      Marker.clearMarkers();
       Marker.fetchAccessibleSignals(Marker.setMarkers);
     });
   };
 
-  pageView.displayWarning = function(warnArray){
-    var $routeAlerts = $('#routeAlerts');
-    $routeAlerts.empty();
-    warnArray.forEach(function(warn, i){
-      var j = i+1;
-      if(warn.length > 0){
-        $routeAlerts.append('There are missing sidewalks near step ' + j + ' of the route. Exercise caution.');
-      }
-    });
+  pageView.displayWarning = function(instructions){
+    pageView.appendResults(instructions, $('#warn-template'), $('#writtenDirections ol'));
   };
 
   pageView.initPage = function(activePage){
     pageView.viewSection(activePage);
     pageView.hamburgerClick();
+    map.resizeMap();
     pageView.highlightTab();
     pageView.showMarkers();
   };
